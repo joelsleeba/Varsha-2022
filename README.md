@@ -1,1 +1,1 @@
-# lectureNotes
+# Lecture Notes in Mathematics
