@@ -1,0 +1,38 @@
+\section{Lecture 1 - Basic Definitions}
+\subsection{Algebras and Sigma-algebras}
+\begin{definition}[Algebra]
+Let $X$ be any arbitrary set. A collection $\calA \subseteq \mathscr P (X)$ is called an algebra if 
+\begin{enumerate}
+    \item $X\in \calA$
+    \item $\forall A \in \calA,\, X\setminus A \in \calA$
+    \item $\forall \calF \subseteq \calA \left( \calF \text{ finite } \Rightarrow \bigcup \calF \in \calA \right)$
+    \item $\forall \calF \subseteq \calA \left( \calF \text{ finite } \Rightarrow \bigcap \calF \in \calA \right)$
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[$\sigma$ -Algebra]
+Let $X$ be any arbitrary set. A collection $\calA \subseteq \mathscr P (X)$ is called an \textit{algebra} if 
+\begin{enumerate}
+    \item $X\in \calA$
+    \item $\forall A \in \calA,\, X\setminus A \in \calA$
+    \item $\forall \{ A_i \}_{i\in\N} \subseteq \mathcal{A}, \,  \bigcup_{i\in \N} A_i  \in \calA $
+    \item $\forall \{ A_i \}_{i\in\N} \subseteq \mathcal{A},\, \left( \calF \text{ finite } \Rightarrow \bigcap_{i\in\N} A_i\in \calA \right)$
+\end{enumerate}
+\end{definition}
+
+\begin{example}[Some families of sets that are algebras or $\sigma$-algebras , and some that are not] Here's a list of examples:
+\begin{enumerate}
+    \item Let $X$ be any set. Let $\calA =\calP (X)$. Then $\calA$ is a $\sigma$-algebra on $X$.
+    \item Let $X$ be any set. Let $\calA$ be the collection of all subsets $A$ of $X$ such that $A$ or $A^c$ is countable. Then $\mathcal{A}$ is $\sigma$-algebra.
+\end{enumerate}
+\end{example}
+
+\begin{proposition}
+Let $X$ be any set. The intersection of an arbitrary nonempty collection of $\sigma$-algebras on $X$ is a $\sigma$-algebra on $X$.
+\end{proposition}
+
+
+\subsection{Measures}
+\begin{example}
+
+\end{example}
