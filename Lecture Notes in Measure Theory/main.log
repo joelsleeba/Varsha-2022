@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  24 JUL 2022 09:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  24 JUL 2022 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -501,7 +501,7 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )) (./lecture2.tex)
 [2] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 78196D1F85FB246A636741A90E7701C4;307.
+(rerunfilecheck)             Checksum: 5FCA09B3B31F5F0A901F9CA55542DB64;325.
  ) 
 Here is how much of TeX's memory you used:
  8413 strings out of 479304
@@ -520,7 +520,7 @@ lic/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/
 rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (2 pages, 84586 bytes).
+Output written on main.pdf (2 pages, 85190 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
