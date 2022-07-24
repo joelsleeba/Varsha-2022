@@ -10,7 +10,7 @@ Here's a quote that I like and wish to implement:
 
 ## Third Semester
 
-1. [Measure Theory](https://github.com/ashishKujur7/lectureNotes/blob/main/Lecture%20Notes%20in%20Measure%20Theory/main.pdf)
+1. [Measure Theory](https://raw.githubusercontent.com/ashishKujur7/lectureNotes/main/Lecture%20Notes%20in%20Measure%20Theory/main.pdf)
 2. Analysis on Manifolds
 3. Partial Differential Equations
 
