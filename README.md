@@ -1,6 +1,6 @@
 # Lecture Notes in Mathematics
 
-I intend to post my notes that I take in class after $\LaTeX$ them. I feel that it will give me very good excuse to review my notes and rephrase it in own words later in the evening after I get back from class. In case, you're curious: I use [Vim](https://www.vim.org/), [Vim-$\LaTeX$](http://vim-latex.sourceforge.net/) plugin and [Zathura](https://pwmt.org/projects/zathura/) to do the needed work.
+I intend to post my notes that I take in class after $\LaTeX$ them. I feel that it will give me very good excuse to review my notes and rephrase it in own words later in the evening after I get back from class. In case, you're curious: I use [Vim](https://www.vim.org/), [Vim-LaTeX](http://vim-latex.sourceforge.net/) plugin and [Zathura](https://pwmt.org/projects/zathura/) to do the needed work.
 
 Here's a quote that I like and wish to implement:
 
