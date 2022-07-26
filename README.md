@@ -2,7 +2,7 @@
 
 I intend to post my notes that I take in class after $\LaTeX$ them. I feel that it will give me very good excuse to review my notes and rephrase it in own words later in the evening after I get back from class. This [answer on Quora](https://qr.ae/pvMgZv) gives a strong argument why it is beneficial.
 
-In case, you're curious: I use [Vim](https://www.vim.org/), [Vim-LaTeX](http://vim-latex.sourceforge.net/) plugin, [TexLive distribution](https://tug.org/texlive/) and [Zathura](https://pwmt.org/projects/zathura/). I did not have hunt them down on the web as they are [free and open source softwares](https://en.wikipedia.org/wiki/Free_and_open-source_software) and available in repositories of most (I suspect all!) Linux distributions. [BTW I use Debian](https://knowyourmeme.com/memes/btw-i-use-arch).
+In case, you're curious: I use [Vim](https://www.vim.org/), [Vim-LaTeX](http://vim-latex.sourceforge.net/) plugin, [TexLive distribution](https://tug.org/texlive/) and [Zathura](https://pwmt.org/projects/zathura/) to typeset these notes. I did not have hunt them down on the web as they are [free and open source softwares](https://en.wikipedia.org/wiki/Free_and_open-source_software) and available in repositories of most (I suspect all!) Linux distributions. [BTW I use Debian](https://knowyourmeme.com/memes/btw-i-use-arch).
 
 Back to Maths; Here's a quote that I like and wish to implement:
 
