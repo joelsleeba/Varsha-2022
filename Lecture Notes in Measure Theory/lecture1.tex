@@ -1,4 +1,4 @@
-\section{Lecture 1 - 9th August 2022 - Basic Definitions}
+\section{Lecture 1 --- 9th August 2022 --- Basic Definitions}
 \subsection{Algebras and Sigma-algebras}
 \begin{definition}[Algebra]
 Let $X$ be any arbitrary set. A collection $\calA \subseteq \mathscr P (X)$ is called an algebra if 
@@ -33,6 +33,10 @@ Let $X$ be any set. The intersection of an arbitrary nonempty collection of $\si
 
 
 \subsection{Measures}
-\begin{example}
-\warning This is just a warning!
-\end{example}
+\begin{definition}
+    A function $\mu : \mathscr A \to [0,+\infty]$ is said to be \textit{measure} if it satisfies the following two properties:
+    \begin{enumerate}
+	\item $\mu (\emptyset) = 0$
+	\item $\mu \left( \bigcup_{n\in\N} A_n  \right) = \sum_{n\in\N} \mu \left( A_n  \right)$
+    \end{enumerate}
+\end{definition}
