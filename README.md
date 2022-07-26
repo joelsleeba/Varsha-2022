@@ -13,7 +13,7 @@ Back to Maths --- Here's a quote that I like and wish to implement:
 ## Third Semester
 
 1. [Measure Theory](https://raw.githubusercontent.com/ashishKujur7/lectureNotes/main/Lecture%20Notes%20in%20Measure%20Theory/main.pdf)
-2. Analysis on Manifolds
-3. Partial Differential Equations
+2. [Analysis on Manifolds](https://github.com/ashishKujur7/lectureNotes/raw/main/Lecture%20Notes%20in%20Analysis%20on%20Manifolds/main.pdf)
+3. [Partial Differential Equations](https://github.com/ashishKujur7/lectureNotes/raw/main/Lecture%20Notes%20in%20Partial%20Differential%20Equations/main.pdf)
 
 ## Fourth Semester
