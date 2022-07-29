@@ -6,7 +6,7 @@ Here's a quote that I like and wish to implement in my own Mathematical journey:
 
 > "Don't just read it; fight it! Ask your own question, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true?$\ldots$ Where does the proof use the hypothesis?"
 >
-> ~ Paul Halmos
+> — Paul Halmos
 
 ## Third Semester
 
