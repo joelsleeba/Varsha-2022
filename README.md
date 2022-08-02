@@ -13,5 +13,7 @@ Here's a quote that I like and wish to implement in my own Mathematical journey:
 1. [Measure Theory](https://raw.githubusercontent.com/ashishKujur7/lectureNotes/main/Lecture%20Notes%20in%20Measure%20Theory/main.pdf)
 2. [Analysis on Manifolds](https://github.com/ashishKujur7/lectureNotes/raw/main/Lecture%20Notes%20in%20Analysis%20on%20Manifolds/main.pdf)
 3. [Partial Differential Equations](https://github.com/ashishKujur7/lectureNotes/raw/main/Lecture%20Notes%20in%20Partial%20Differential%20Equations/main.pdf)
+4. [Finite Frames](https://raw.githubusercontent.com/ashishKujur7/Lecture-Notes/main/Lecture%20Notes%20in%20Finite%20Frames/main.pdf)
+5. [Commutative Algebra](https://raw.githubusercontent.com/ashishKujur7/Lecture-Notes/main/Lecture%20Notes%20in%20Commutative%20Algebra/main.pdf)
 
 ## Fourth Semester
