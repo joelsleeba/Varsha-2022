@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  28 JUL 2022 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.6.1)  2 AUG 2022 23:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -478,7 +478,7 @@ File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box50
 )
-(./main.aux (./lecture1.aux))
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 217.
@@ -500,8 +500,7 @@ LaTeX Font Info:    ... okay on input line 217.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 217.
 LaTeX Font Info:    Trying to load font information for FML+futm on input line 
 217.
-
-(/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 217.
@@ -635,33 +634,26 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = `lecture1.aux'.
-
- (./lecture1.tex)
-[2
-
-] (./main.aux (./lecture1.aux))
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7C954A027C4AA498149A5D2215CD184E;65.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8560 strings out of 479304
- 124536 string characters out of 5869780
- 443357 words of memory out of 5000000
- 25560 multiletter control sequences out of 15000+600000
- 464611 words of font info for 80 fonts, out of 8000000 for 9000
+ 8536 strings out of 479304
+ 124259 string characters out of 5869780
+ 441953 words of memory out of 5000000
+ 25552 multiletter control sequences out of 15000+600000
+ 450861 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,6n,74p,369b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/adobe/utopia/putbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utop
-ia/putri8a.pfb>
-Output written on main.pdf (2 pages, 52050 bytes).
+/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/adobe/utopia/putri8a.pfb>
+Output written on main.pdf (1 page, 38108 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
