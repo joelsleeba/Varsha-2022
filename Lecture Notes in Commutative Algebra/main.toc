@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {\S 1}Lecture 1 --- 10th August 2022 --- Local Rings, Semilocal rings, Chinese Remainder Theorem}{1}{section.1}%
+\contentsline {subsection}{\numberline {\S 1.1}Basic Definitions --- Local Rings, Semilocal rings and few other results}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {\S 1.2}Chinese Remainder Theorem}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {\S 2}Lecture 2 --- 12th August 2022 --- }{4}{section.2}%
+\contentsline {subsection}{\numberline {\S 2.1}Proof of Chinese Remainder Theorem continued \ldots }{4}{subsection.2.1}%

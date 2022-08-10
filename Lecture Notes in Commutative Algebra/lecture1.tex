@@ -1,0 +1,113 @@
+\section{Lecture 1 --- 10th August 2022 --- Local Rings, Semilocal rings, Chinese Remainder Theorem}
+
+We will be assuming the following things before proceeding in the course:
+\begin{itemize}
+    \item A ring $A$ is a commutative ring with unity.
+    \item Existence of maximal ideals in a commutative ring with unity (this follows immediately from Zorn's Lemma)
+    \item Definition of ring morphism.
+    \item Definition of prime and maximal ideals and the facts that
+	\begin{itemize}
+	    \item $P$ is a prime ideal of $A$ iff $A/P$ is a maximal ideal and
+	    \item $M$ is a maximal ideal of $A$ iff $A/P$ is a commutative ideal
+	\end{itemize}
+\end{itemize}
+
+\subsection{Basic Definitions --- Local Rings, Semilocal rings and few other results}
+
+\begin{definition}[local ring]
+    Let $A$ be a ring. $A$ is said to be a \textit{local ring} if $A$ has a unique maximal ideal $M$. A local ring is often denoted by $(A,M)$. 
+    \label{def:local-ring}
+\end{definition}
+
+\begin{definition}[semilocal ring]
+    Let $A$ be a ring. $A$ is said to be \textit{semilocal ring} if $A$ has only fintiely many maximal ideals.
+    \label{def:semilocal-ring}
+\end{definition}
+
+How does one come up with a semilocal ring with exactly $m$ maximal ideals? Here's an example:
+\begin{example}[A ring with $m$ distinct maximal ideals]
+    Let $A= \Z / n\Z$. It is fairly easy to show that all the ideals of $A$ are of the form $\left( \overline k \right)$ where $k\in\N$ and $k\mid n$ and also that if $k,j \mid n$ and $\left( \overline k \right) \subset \left( \overline j \right)$ iff $j\mid k$. (See Sepanski Exercise 3.47 and 3.48) Now let $p_1 , p_2 , \ldots ,  p_m$ be $m$ distinct primes. Define $n=p_1 p_2 \cdots p_m$. It is easy to see from the aforementioned facts that $A = \Z / n\Z$ has $m $ distinct maximal ideals.
+\end{example}
+
+
+\begin{example}[A standard example of a local ring?]
+
+    Let $A$ be a ring, $M$ be a maximal ideal of $A$ and $n\in \N$. Observe that $M^n$ is a ideal of $A$ (See Sepanski Exercise 3.51). We claim that $A/ M^n$ has only prime ideal namely $M / M^n$. Let $\calP$ be a prime ideal of $A / M^n$. Then by the correspondence theorem, $\calP = P/ M^n$ where $P$ is a prime ideal of $A$ containing $M^n$. Then $P\supset M^n$ which further implies that $P \supset M$ since $M^n \supset M$. Since $M$ is a maximal ideal, we have that $P=M$. This completes the proof of the claim. Also, note that since every maximal ideal is prime, we have that $A/M^n$ is a local ring.
+
+\end{example}
+ 
+\begin{lemma}
+    Let $A, B$ be rings, $f:A\to B$ be a ring morphism and $Q$ be a prime ideal in $B$. Then $f^{-1} \left( Q \right)$ is a prime ideal of $A$. 
+    \label{lemma:inverse-image-of-prime-ideal}
+\end{lemma}
+\begin{proof}
+    Let $p: B \to B/Q$ be the canonical homomorphism. Consider the map $p \circ f : A \to B/Q$. We show that $\ker (p \circ f) = f^{-1} \left( Q \right)$. It is easy to show that if $\varphi : A \to B$ is an ring homomorphism and $B$ is an integral domain then $\ker (\varphi )$ is an integral domain. We will be done if we show that $\ker (p \circ f) = f^{-1}\left( Q \right)$ as $B/Q$ is an integral domain. So consider the following:
+    \begin{align*}
+	x \in \ker \left( p \circ f \right) & \Leftrightarrow p (f(x)) = Q \\
+					& \Leftrightarrow f(x) + Q = Q \\
+					& \Leftrightarrow f(x) \in Q \\
+					& \Leftrightarrow x \in f^{-1} \left( Q \right)
+    \end{align*}
+\end{proof}
+
+% complete the commutative diagram here using Tikz and show that above proof holds in general.
+
+\begin{lemma}
+    Let $A$ be a ring, let $I,J $ be ideals of $A$ and $P$ be a prime ideal of $A$. If $P \supset IJ$ then either $P \supset I$ or $P\supset J$.
+    \label{lemma:equiv-prime}
+\end{lemma}
+\begin{proof}
+    Suppose that $P \not \supset J$. Then there is some $i\in I \setminus P$. We show that $J \subset P$. Let $j \in P$. Then $ij \in IJ$ and hence $ij \in P$. Since $P$ is a prime ideal, we must have that either $i\in P $ or $j \in P$. But the former is not possible by assumption, therefore, $j\in P$. Since $j$ was arbitrary, the proof is complete.
+\end{proof}
+
+\begin{remark}
+    Let $A$ be a ring, $I$ be any ideal of $A$. Then there is a maximal ideal $M$ of $A$ containing $A$. The proof of this remark is fairly straightforward. Consider the ring $A/I$. Since every ring has a maximal ideal, so there must be some maximal ideal $\calM$ of $A/I$. By the correspondence theorem, $\calM = M/I$ for some ideal $M$ of $A$. This ideal $M$ of $A$ must be maximal again by the correspondence theorem and this completes the proof of the remark.
+    \label{rem:maximal-ideal-containing-some-ideal}
+\end{remark}
+
+\begin{lemma}
+    Let $A$ be a ring, $I, J, K$ be ideals of $A$. Furthermore, assume that $I, J$ are comaximal and $I, K$ are comaximal. Then $I+JK=A$. (Recall that two ideals $I,J$ are said to be comaximal if $I+J=A$.)
+    \label{lemma:comaximal}
+\end{lemma}
+\begin{proof}
+    Suppose that $I+JK \subsetneq A$. Then by Remark \ref{rem:maximal-ideal-containing-some-ideal}, we have that there is some maximal (and hence prime) ideal $P$ containing $I+JK$. Thus, we have that $I\subset P$ and $JK \subset P$. 
+
+    From $JK \subset P$, we can conclude that $J\subset P$ or $K \subset P$ from Lemma \ref{lemma:equiv-prime}. But in the either case, we have that $I+J \subset P \subsetneq A$. A contradiction and hence $I+JK = A$.
+\end{proof}
+
+\begin{example}
+    Let $A=\Z$. Note that the ideal $\left( 3,4 \right)$ generated by $3$ and $4$ and the ideal $\left( 3,5 \right)$ generated by $3$ and $5$ are exactly $\Z$. Thus, the ideal $\left( 3, 20 \right) =A$ by Lemma \ref{lemma:comaximal}.
+\end{example}
+
+\subsection{Chinese Remainder Theorem}
+
+\begin{theorem}[Chinese Remainder Theorem]
+    Let $A$ be a ring, $I_1 , I_2 , \ldots , I_n$ be ideals of $A$. Consider the canonical map $\varphi : A \to A/I_1 \times A/I_2 \times \cdots A/I_n$ given by $\varphi \left( x \right) = \left( x+I_1 , \ldots , x+I_n \right)$. Then the following holds:
+    \begin{enumerate}
+	\item If $I_p , I_q$ are comaximal for all $1 \le p < q \le n$ then $I_1 I_2 \ldots I_n = I_1 \cap I_2 \cap \ldots \cap I_n$
+	\item $\varphi$ is injective iff $\ker \varphi = I_1 \cap I_2 \cap \ldots \cap I_n = \left\{ 0 \right\}$
+	\item If $\varphi$ is surjective iff $I_m , I_n$ are comaximal for all $1\le m < n \le n$
+    \end{enumerate}
+    \label{thm:CRT}
+\end{theorem}
+
+\begin{proof}[Proof of (1)]
+    We proceed by induction on $n$. Suppose that $n=2$. Consider the ideals $I_1 , I_2$ satisfying $I_1 + I_2 = A$. We show that $I_1 I_2 = I_1 \cap I_2$.
+
+    It is fairly easy to see that $I_1 I_2 \subset I_1 \cap I_2$. if $i_1 \in I_1$ and $i_2 \in I_2$ then $i_1 i_2 \in I_1$ and $i_1 i_2 \in I_2$ as $I_1$ and $I_2$ are both ideals of $A$. Hence, $i_1 i_2 \in I_1 \cap I_2$. To see the reverse inclusion, we use the comaximality of $I_1$ and $I_2$. Since $I_1 + I_2 =A$, $1=i_1 + i_2$ for some $i_1 \in I_1$ and some $i_2 \in I_2$. Let $c \in I_1 \cap I_2$. Then $c= i_1 c + c i_2 $. Clearly $i_1 c \in I_1 I_2$ and $c i_2 \in I_1 I_2$ and hence $c\in I_1 I_2$.
+
+    Suppose that (1) holds true for any $n-1$ ideals of $A$ where $n>2$. Let $I_1 , I_2 , \ldots , I_n$ be ideals of $A$. Define $J=I_1 I_2 \cdots I_{n-1}$ and $I= I_n$. We show that $I+J=A$.
+
+    It is easy to see that $I+J \subset A$. Now we use that comaximality of $I_{n-1}$ and $I_n$. By the comaximality, we have $1 = i_{n-1} + i_{n}$ for some $i_{n-1}\in I_{n-1}$ and some $i_n \in I_{n}$. Let $a\in A$. Then $a=ai_{n-1} + ai_{n}$. Clearly, $ai_{n} \in I_{n}$ as $I_{n}$ is an ideal and $ai_{n-1} \in I_{n-1}$. Since $I_{n-1}\subset I$, we are done.
+
+    By the $n=2$, it follows that $IJ=I\cap J$. Now our result follows from the induction hypothesis:
+    \begin{align*}
+	I_1 \ldots I_{n-1} I_n &= JI \\
+	                       &= J \cap I \\
+			       &= I_1 \ldots I_{n-1} \cap I_n \\
+			       &= I_1 \cap \ldots \cap I_{n-1} \cap I_n
+    \end{align*}
+    Observe that the third equality follows from the induction hypothesis.
+    
+\end{proof}
+
