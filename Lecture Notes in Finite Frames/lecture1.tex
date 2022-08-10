@@ -1,0 +1,62 @@
+\section{Lecture 1 --- 10th August, 2022 --- Hilbert Spaces \& Frames}
+We start by reviewing the elementary notions from Linear Algebra.
+\subsection{Inner Product Spaces}
+\begin{definition}
+    A vector space $V$ over a field $F$ ( $\R$ or $\C$ ) is called an \textit{inner product space} if there exists a function $\langle \cdot , \cdot \rangle : V \times V \to F$ satisfying the following:
+    \begin{enumerate}
+	\item $\langle x , x \rangle \ge 0$ for all $x\in V$.
+	\item $\langle x , x \rangle =0$ iff $x=0$.
+	\item (linear in the first argument) for all $x,y,z \in V$, $\langle x+y , z\rangle = \langle x , z \rangle + \langle y , z \rangle$
+	\item (conjugate) for all $x,y \in V$, $\langle x , y \rangle = \overline{\langle y , x \rangle}$
+    \end{enumerate}
+    \label{def:ips}
+\end{definition}
+
+\begin{definition}
+    A norm on a vector space $V$ over $\R$ or $\C$ is a function $\norm{\cdot} : V \to [0, +\infty)$ satisfying
+    \begin{enumerate}
+	\item for all $x\in V$, $\norm{x} = 0 \Leftrightarrow x=0$
+	\item $\norm{x+y} \le \norm{x} + \norm{y}$ for all $x,y\in V$
+	\item $\norm{\alpha x} =|\alpha| \norm{x}$ for all $x \in V$ and $\alpha \in F$
+	\end{enumerate}
+    \label{def:norm}
+\end{definition}
+
+It is easy to check that if $V$ is an inner product space then $\norm{\cdot}$ defined by $\norm{x}=\sqrt{\ip{x}{x}}$ is a norm on $V$. To verify the triangle inequality, use Cauchy Schwarz inequality.
+
+\begin{definition}
+    A vector space together with a norm is called a normed linear space.
+    \label{def:normed-space}
+\end{definition}
+
+Note that every normed linear space $\left( V, \norm{\cdot} \right)$ is a metric space. The metric is given by $d (x, y) = \norm{x-y}$ for all $x,y \in V$.
+
+\subsection{Hilbert Spaces \& Frames}
+
+\begin{definition}
+    An inner product space which is complete wrt the induced norm is called Hilbert Space.
+    \label{def:Hilbert-Space}
+\end{definition}
+
+We will only be considering finite dimensional Hilbert spaces in this course!
+
+\begin{example}
+    \begin{enumerate}
+	\item $\R ^n$ with the usual inner product is a Hilbert Space.
+	\item $\C ^n$ with the usual inner product is a Hilbert Space.
+	\end{enumerate}
+\end{example}
+
+\begin{definition}
+    A sequence $\left\{ f_n \right\}$ in $H$ is called a frame for $H$ if there exists positive constants $A$ and $B$ such that
+    $$A\norm{f}^2 \le \sum_{i} |\ip{f}{f_i}|^2 \le B \norm{f}^2$$
+    for all $f\in H$.
+    \label{def:frame}
+\end{definition}
+
+\begin{remark}
+    It is possible to have that a frame in a finite dimensional Hilbert space consisting of infinitely many elements. However, it is rather artificial to have infinite number of frame elements in a finite dimensional space. We therefore consider only frames with finite number of elements.
+    \label{rem:finite-frames}
+\end{remark}
+
+
