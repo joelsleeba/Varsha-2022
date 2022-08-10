@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  10 AUG 2022 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  10 AUG 2022 19:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,32 +647,39 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 (./lecture1.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-(./lecture2.tex) [2] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
+43.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+) [2]) [3]
+(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DBDD476B52A035E2DACB36B77A69AC4D;331.
+(rerunfilecheck)             Checksum: 76274888EDFCBD219A12FC26D1FBDC96;305.
  ) 
 Here is how much of TeX's memory you used:
- 8621 strings out of 479304
- 125222 string characters out of 5869780
- 449964 words of memory out of 5000000
- 25591 multiletter control sequences out of 15000+600000
- 481739 words of font info for 113 fonts, out of 8000000 for 9000
+ 8663 strings out of 479304
+ 125858 string characters out of 5869780
+ 455346 words of memory out of 5000000
+ 25619 multiletter control sequences out of 15000+600000
+ 483595 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,369b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,6n,74p,369b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/a
-dobe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/
-putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (2 pages, 68830 bytes).
+ts/type1/public/fourier/fourier-ml.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/fourier/fourier-mlit.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/u
+topia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on main.pdf (3 pages, 83467 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 27 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 34 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
