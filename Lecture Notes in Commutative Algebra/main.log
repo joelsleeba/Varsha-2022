@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  10 AUG 2022 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  11 AUG 2022 08:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,10 +663,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FFE4FBF9E4D432BEE27ED63D4F578F3A;493.
  ) 
 Here is how much of TeX's memory you used:
- 8654 strings out of 479304
- 125825 string characters out of 5869780
- 460235 words of memory out of 5000000
- 25620 multiletter control sequences out of 15000+600000
+ 8656 strings out of 479304
+ 125859 string characters out of 5869780
+ 461267 words of memory out of 5000000
+ 25621 multiletter control sequences out of 15000+600000
  482247 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,8n,74p,658b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -679,10 +679,10 @@ ype1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ad
 obe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/p
 utr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (4 pages, 83767 bytes).
+Output written on main.pdf (4 pages, 84419 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 26 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,8 +7,8 @@ We will be assuming the following things before proceeding in the course:
     \item Definition of ring morphism.
     \item Definition of prime and maximal ideals and the facts that
 	\begin{itemize}
-	    \item $P$ is a prime ideal of $A$ iff $A/P$ is a maximal ideal and
-	    \item $M$ is a maximal ideal of $A$ iff $A/P$ is a commutative ideal
+	    \item $P$ is a prime ideal of $A$ iff $A/P$ is an integral domain and
+	    \item $M$ is a maximal ideal of $A$ iff $A/P$ is a field
 	\end{itemize}
 \end{itemize}
 
@@ -36,12 +36,20 @@ How does one come up with a semilocal ring with exactly $m$ maximal ideals? Here
 
 \end{example}
  
+\begin{fact}
+    Let $A$ be ring, $B$ be an integral domain, $f: A\to B$ be a ring morphism and $Q$ be a prime ideal of $B$. Then $\ker (f)$ is a prime ideal of $A$.
+    \label{fact:inverse-prime}
+\end{fact}
+\begin{proof}[Proof of the fact]
+    Suppose that $ab \in \ker (f)$. Then $f(ab)=0$ which further implies $f(a)f(b)=0$ and hence $a\in \ker(f)$ or $b\in\ker(f)$ since $B$ is an integral domain.
+\end{proof}
+
 \begin{lemma}
     Let $A, B$ be rings, $f:A\to B$ be a ring morphism and $Q$ be a prime ideal in $B$. Then $f^{-1} \left( Q \right)$ is a prime ideal of $A$. 
     \label{lemma:inverse-image-of-prime-ideal}
 \end{lemma}
 \begin{proof}
-    Let $p: B \to B/Q$ be the canonical homomorphism. Consider the map $p \circ f : A \to B/Q$. We show that $\ker (p \circ f) = f^{-1} \left( Q \right)$. It is easy to show that if $\varphi : A \to B$ is an ring homomorphism and $B$ is an integral domain then $\ker (\varphi )$ is an integral domain. We will be done if we show that $\ker (p \circ f) = f^{-1}\left( Q \right)$ as $B/Q$ is an integral domain. So consider the following:
+    Let $p: B \to B/Q$ be the canonical homomorphism. Consider the map $p \circ f : A \to B/Q$. We show that $\ker (p \circ f) = f^{-1} \left( Q \right)$. The lemma will follows from fact \ref{fact:inverse-prime}, if we show that $\ker (p \circ f) = f^{-1}\left( Q \right)$ as $B/Q$ is an integral domain. So consider the following:
     \begin{align*}
 	x \in \ker \left( p \circ f \right) & \Leftrightarrow p (f(x)) = Q \\
 					& \Leftrightarrow f(x) + Q = Q \\
