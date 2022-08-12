@@ -1,1 +1,5 @@
-\contentsline {section}{\numberline {\S 1}Lecture 1 --- \textit {date} --- \textit {topic}}{2}{section.1}%
+\contentsline {section}{\numberline {\S 1}Lecture 1 --- 11th August, 2022 --- Definition, Classifications \& Examples of PDEs}{2}{section.1}%
+\contentsline {subsection}{\numberline {\S 1.1}Notations}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {\S 1.2}Definition, Classification \& Examples}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {\S 1.2.1}Classifications of PDE}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {\S 1.2.2}Examples}{3}{subsubsection.1.2.2}%

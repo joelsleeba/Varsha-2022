@@ -1,2 +1,46 @@
-\section{Lecture 1 --- \textit{date} --- \textit{topic}}
-Just a test!
+\section{Lecture 1 --- 11th August, 2022 --- Definition, Classifications \& Examples of PDEs}
+\subsection{Notations}
+\begin{itemize}[label=--]
+    \item Let $\N _0$ be defined to be the set $\N \cup \left\{ 0 \right\}$. For any $N\in \N$, an element of $\N _ 0 ^N$ to be an \textit{multiindex}. If $\alpha \in \N _0 ^N$ then $\alpha = \left( \alpha _1 ,\alpha_2,\ldots, \alpha_N \right)$ for some $\alpha_i \in \N _0$.
+
+    \item For any $x\in \R ^N$ and $N\in \N$, we define $x^\alpha = x_1 ^{\alpha_1}\cdots x_N ^{\alpha _N}$.
+
+    \item Given any multiindex $\alpha \in \N _0 ^N$, we define $|\alpha | =\alpha_1 + \alpha _2 + \ldots + \alpha _N$.
+
+    \item Given any multiindex $\alpha$, we define
+\begin{equation*}
+    D^{\alpha} := \frac{\partial ^{|\alpha|}}{\partial {x_{1}} ^{\alpha_1} \cdots \partial {x_{N}} ^{\alpha_N}} = \partial { x_1 }^{\alpha _1}\cdots \partial { x_N }^{\alpha_N}
+\end{equation*}
+
+\item For any $k\in \N$, denote $D^k =\left\{ D^{\alpha} : |\alpha| =k \right\}$
+
+\item We will denote $\Omega \subset \R ^N$ to be an open subset.
+
+\end{itemize}
+
+\subsection{Definition,  Classification \& Examples}
+\begin{definition}[Partial Differential Equation]
+Let $\Omega$ be an open subset of $\R ^N$. An expression of the form  
+\begin{equation}
+    F\left( D^{k} u(x), D^{k-1} u(x), \ldots , Du(x), x \right)=0 \qquad (x\in \Omega)
+    \label{eqn:pde}
+\end{equation}
+is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may assume $F: \R ^{N^k} \times \R^{N^{k-1}} \times \cdot \times \R ^N \times \Omega \to \R$ is a given smooth function.
+
+\end{definition}
+
+\subsubsection{Classifications of PDE}
+\begin{enumerate}[label=(\roman*)]
+    \item The PDE (\ref{eqn:pde}) is called \textit{linear} if it has the form $$\sum_{0\le |\alpha| \le k} a_{\alpha} (x) D^{\alpha} u =f$$ 
+	for some functions $a_{ \alpha }$, f. The linear PDE is homogeneous if $f=0$.
+\item The PDE (\ref{eqn:pde}) is called \textit{semilinear} if it has the form
+    $$\sum_{|\alpha|=k} a_{\alpha}(x) D^{\alpha}u + a_0 \left( D^{k-1}u, \ldots , Du, u, x \right) =0$$
+\item The PDE (\ref{eqn:pde}) is called \textit{quasilinear} if it has the form 
+    $$\sum_{|\alpha =k} a_{\alpha} (D^{k-1} u, \ldots , Du, u, x) D^{\alpha} u + a_0 \left( D^{k-1} u, \ldots , Du, u, x \right) = 0$$
+\item The PDE (\ref{eqn:pde}) is called \textit{nonlinear} if the PDE has a nonlinear dependence on the highest order derivative.
+
+\end{enumerate}
+
+\subsubsection{Examples}
+
+
