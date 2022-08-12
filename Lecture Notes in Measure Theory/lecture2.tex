@@ -1,2 +1,68 @@
-\section{Lecture 2}
-\subsection{Lebesgue Integral}
+\section{Lecture 2 --- 12th August 2022 --- Properties of Measures and Definition of semialgebra}
+\begin{proof}[Proof of Theorem \ref{thm:equiv-measure}] 
+    Let $\mu : \calF \to [0,\infty]$ be a function.
+
+    ($\Rightarrow$) Suppose that $\mu$ is a measure. We first show that $\mu$ is finitely additive. Let $A, B \in \calF$ and suppose that $A\cap B=\emptyset$. Let $A_1 =A $ and $A_2 =B$ and $A_n = \emptyset$ for all $n\ge 3$. Then $\mu (A\cup B) = \mu \left( \cup_{i\in\N} A_i \right) = \sum_{i\in\N} \mu (A_i) = \mu (A) + \mu (B)$ as $\mu (\emptyset ) =0$. 
+
+    We now prove that $\mu$ is continuous from below. Let $\left\{ A_n \right\}$ be anondecreasing sequence of elements from $\calF$. Define $B_1=A_1$ and $B_n = A_n \setminus A_{n-1}$ for each $n\ge 2$. Clearly, $\cup_n B_n = \cup_n A_n$ and $B_n \cap B_m = \emptyset$ for all $m\ne n$.
+    \begin{align*}
+\mu \left( \cup_n A_n \right)&= \mu \left( \cup_n B_n \right) \\
+&= \sum_{n\in N} \mu \left( B_n \right) \\
+&=  \lim_{m} \left[\mu (A_1) +\sum_{n=2}^{m} \left(\mu \left( A_n \right) - \mu \left( A_{n-1} \right)\right)\right] \\
+&= \lim_{m} \mu (A_m)
+\end{align*}
+
+($\Leftarrow$) Now suppose that $\mu$ is finitely additive and continuous from below.
+We intend to prove that $\mu$ is a measure. It is clear that from finite additivity that $\mu \left( \emptyset \right) = 0$.  Let $\left\{ A_n \right\}$ be a sequence of elments from $\calF$. Define $B_n = \bigcup_{i=1}^{n} A_i$ for all $n\in \N$. Clearly, $B_n \nearrow \cup_{k=1}^{\infty} A_k$. Clearly, $\left\{ B_n \right\}$ is an nondecreasing sequence of elements from $\calF$. Then
+\begin{align*}
+    \mu \left( \cup_{i=1}^{\infty} A_i \right) &= \mu \left( \cup_{i=1}^{\infty} B_n \right) &\\
+    &= \lim_{n\to\infty} \mu\left( B_n \right) & \text{(using continuity from below)} \\
+    &= \lim_{n\to\infty} \mu \left( \cup_{j=1}^{n} A_j \right) & \\
+    &= \lim_{n\to\infty} \sum_{j=1}^{n} \mu \left( A_j \right) & \text{(finite additivity)} \\
+    &= \sum_{j=1}^{\infty} \mu (A_j) 
+\end{align*}
+\end{proof}
+
+\subsection{Properties of Measures}
+
+\begin{theorem}
+    Let $\mu$ be a measure on a $\sigma$-algebra $\calF$. Then
+    \begin{enumerate}[label=(\arabic*)]
+	\item $\mu$ is monotone,
+	\item $\mu$ is finitely additive, that is, $\mu \left( A_1 \cup A_2 \cup \ldots \cup A_n \right) \le \sum_{i=1}^{k} \mu (A_k)$ for $A_1, A_2, \ldots , A_k \in \calF	$.
+	\item the inclusion-exclusion formula holds,
+	\item $\mu$ is continuous from above, that is, if $\left( A_n \right) \subset\calF$ such that $A_n \supset A_{n+1}$ for all $n\in\N$ and $\mu (A_{n_0}) < +\infty$ for some $n_0$ then $\lim \mu(A_n) = \mu \left( \cap_n A_n \right)$ and
+
+	\item $\mu$ is countably subadditive, that is, if $\left\{ A_n \right\}_{n\in \N}\subset \calF$ then $\mu \left(\cup_n A_n \right) \le \sum_{i=1}^{\infty} \mu \left( A_n \right)$
+    \end{enumerate}
+    \label{thm:prop-measures}
+\end{theorem}
+\begin{proof}
+    We show that $\mu$ is monotone. Let $A \subset B$ be elements of $\calF$. Then $B=A\cup B\setminus A$. Hence $\mu (B) = \mu (A) + \mu (B\setminus A)$. Since $\mu (B\setminus A ) \ge 0$, we have that $\mu (B) \ge \mu (A)$. 
+
+    Now, we prove that the inclusion exclusion formula holds for $\mu$. Let $A, B\in \calF$. If both $\mu(A) = +\infty$ and $\mu (B) = + \infty$ then there is nothing to prove. So, assume wlog that $\mu (A) < \infty$. Then $\mu (A \cap B) < \infty$.  Then
+    \begin{align*}
+	\mu (A \cup B) + \mu (A\cap B) &= \mu (A) + \mu (B \setminus A) + \mu (B\cap A)  \\
+	&= \mu (A) + (\mu (B \setminus A) + \mu (B\cap A))  \\
+	&= \mu (A) + \mu (B)
+    \end{align*}
+
+    Now, finite subadditivity follows immediately from inclusion-exclusion formula and induction.
+
+    We now prove that $\mu$ is continuous from below. Let $\left\{ A_n \right\}$ be a sequence of decreasing sequence sets with $\mu (A_{n_0}) < +\infty$ for some $n_0$. Then we have that $\mu (A_1) \le \mu (A_{n_0}) < +\infty$. Define $B_n = A_1 \setminus A_n$ and $B=A_1 \setminus \cap_n A_n$. It is easy to see that $B_n \uparrow B$ (draw pictures!). From Theorem \ref{thm:equiv-measure} (continuity from below), we have that $\lim \mu (B_n ) = \mu (B)$.   
+
+    Now, observe that $\mu (B_n ) = \mu (A_1) - \mu (A_n )$ for each $n$. So, $\mu (B) = \lim \mu (B_n) = \mu (A_1) - \lim \mu (A_n)$. 
+
+    Also, we have that $\mu (B) = \mu (A_1) - \mu (\cap_n A_n )$. Hence, we have that $\lim \mu (A_n ) = \mu \left( \cap_n A_n \right)$. 
+
+    We now prove that $\mu$ is countably subadditive. Let $\left\{ A_n \right\}$ be a sequence of elements from $\calF$. Then $B_k := \cup_{n=1}^{k} A_n \uparrow \cup_{n} A_n$. By continuity from below, we have that $\mu \left( \cup_n A_n \right) = \lim_k \mu (B_k) \le \lim_k \left( \mu (A_1) + \mu (A_2) + \ldots + \mu (A_k) \right)= \sum_{k=1}^{\infty} \mu (A_k)$. Note that the inequality is due to finite subadditivity.
+\end{proof}
+
+\begin{definition}
+    A collection $\calC$ of subsets of $\Omega$ is called a \textit{semialgebra} if $\calC$ is closed under finite-$\cap$ and if $A\in \calC$ then there exists some $B_1, B_2 , \ldots , B_n \in \calC$ such that $A^c = \cup_{i=1}^{n} B_i$.
+    \label{def:semialgebra}
+\end{definition}
+
+\begin{exercise}
+    Find a general formulation of the inclusion-exclusion principle for measures.
+\end{exercise}
