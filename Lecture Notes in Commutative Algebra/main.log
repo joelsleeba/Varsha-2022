@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  11 AUG 2022 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  12 AUG 2022 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -657,19 +657,20 @@ LaTeX Font Info:    Trying to load font information for TS1+futs on input line
 File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]) (./lecture2.tex) 
-[4] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]) (./lecture2.tex [
+4])
+(./lecture3.tex) [5] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FFE4FBF9E4D432BEE27ED63D4F578F3A;493.
+(rerunfilecheck)             Checksum: 5BCB33870DA329D95FA8D6013EDB3C35;720.
  ) 
 Here is how much of TeX's memory you used:
- 8656 strings out of 479304
- 125859 string characters out of 5869780
- 461267 words of memory out of 5000000
- 25621 multiletter control sequences out of 15000+600000
+ 8667 strings out of 479304
+ 125997 string characters out of 5869780
+ 461323 words of memory out of 5000000
+ 25625 multiletter control sequences out of 15000+600000
  482247 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,74p,658b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,9n,74p,658b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dis
@@ -679,10 +680,10 @@ ype1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ad
 obe/utopia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/p
 utr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (4 pages, 84419 bytes).
+Output written on main.pdf (5 pages, 91303 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 132 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

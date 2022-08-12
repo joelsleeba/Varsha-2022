@@ -1,2 +1,42 @@
-\section{Lecture 2 --- 12th August 2022 --- }
+\section{Lecture 2 --- 12th August 2022 --- Chinese Remainder Theorem continued\dots}
 \subsection{Proof of Chinese Remainder Theorem continued \ldots}
+\begin{proof}[Proof of (2) and (3)]
+    Observe the following:
+    \begin{align*}
+	a\in \ker \varphi &\Longleftrightarrow \varphi (a)=\left( I_1 , I_2 , \ldots , I_n \right) \\
+	&\Longleftrightarrow (a+I_1 , a+I_2 , \ldots , a+I_n) = \left( I_1 , I_2, \ldots , I_n \right)\\
+&\Longleftrightarrow a\in I_1 \cap I_2 \cap \ldots \cap I_n
+    \end{align*}
+    Hence $\ker \varphi = I_1 \cap I_2 \cap \ldots \cap I_n$. So it is easy to see now that $(2)$ follows immediately from what we just proved.
+
+    Now, we proceed to prove (3). We first prove $\left( \Leftarrow \right)$ direction. Suppose that $I_p$ and $I_q$ are comaximal for $1\le p  < q \le n$. Let us denote $e_i \; \left( 1\le i \le n \right)$ for $e_i = \left( I_1 , I_2 , \ldots , 1+I_i , \ldots , I_n \right)$.
+
+    We first show that $I_1 + I_2\cdots I_n = A$. We show this by induction. Clearly, $I_1 + I_2 = A$ by assumption. Now suppose that $I_1 + I_2 \cdots I_{n-1} =A$. It then follows from Lemma \ref{lemma:comaximal} and $I_1 + I_n =A$ that $I_1 + I_2 \cdots I_n =A$.
+
+    Now, $1=x+y$ for some $x\in I_1$ and $y\in I_2\cdots I_n$. It follows from part (1) of this theorem that $I_2 \cdots I_n = I_2 \cap \ldots \cap I_n$. Thus $y\in I_2 \cap \ldots \cap I_n$. Thus 
+    \begin{align*}
+	\varphi (y) &= \left( y+I_1, \ldots, y+ I_n \right)\\
+	&= (1-x + I_1 , y+I_2 , \ldots , y+ I_n) \\
+	&= (1+I_1 , I_2, \ldots, I_n) \\
+	&= e_1
+    \end{align*}
+    This shows that $e_1$ is in the image of $\varphi$. Similarly, it can be shown that $e_i$ is in the image of $\varphi$ for each $i$.
+
+    Now, we can finally show that $\varphi$ is actually surjective. Let $\left( a_1 + I_1 , \ldots, a_n + I_n \right)$ be in the codomain of $\varphi$. Since we have shown that each $e_i$ is in the image of the $\varphi$, $\varphi (y_i) = e_i$ for some $y_i \in A$.
+
+    Now observe that
+    \begin{align*}
+	\varphi \left( \sum_{i=1}^{n} a_i y_i \right) &= \sum_{i=1}^{n} \varphi (a_i) \varphi (y_1) \\
+	&= \sum_{i=1}^{n} \left( a_i + I_1 , \ldots , a_i +I_i, \ldots , a_i +I_n \right) \left( I_1, \ldots , 1+I_i , \ldots , I_n \right) \\
+	&= \sum_{i=1}^n \left( I_1 , I_2 , \ldots, a_i +I_i , \ldots, I_n \right) \\
+	&= \left( a_1 + I_1 , a_2 + I_2 ,\ldots , a_n + I_n \right)
+    \end{align*}
+    This shows that $\varphi$ is surjective.
+
+    We proceed to prove the $\left( \Rightarrow \right)$ direction of $(3)$.  Suppose that $\varphi$ is surjective. We just show that $I_1 + I_2 = A$. The others follow similarly. To prove that $I_1 + I_2 = A$, it suffices to show that $1\in I_1 +I_2$. Following the convention in the previous direction, there is some $x\in X$ such that $\varphi (x) =e_1$. So $\left( x+I_1 , \ldots , x+I_n \right) = \left( 1+I_1 , \ldots , I_n \right)$. Then $1-x\in I_1$ and $x \in I_2$. Hence $1= (1-x)+ x\in I_1 + I_2$. This completes the proof.
+\end{proof}
+
+\begin{lemma}[Prime Avoidance Lemma]
+    Let $I, P_1, P_2, \ldots, P_n$ be ideals of a ring $A$. Furthermore, assume that $P_i$ is prime for each $i$. If $I \subset P_1 \cup P_2 \cup \ldots \cup P_n$ then there is some $j$ such that $P \subset I_j$.
+    \label{lemma:prime-avoidance}
+\end{lemma}
