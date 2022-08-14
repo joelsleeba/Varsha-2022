@@ -41,6 +41,67 @@ is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may 
 
 \end{enumerate}
 
-\subsubsection{Examples}
+\begin{definition}[System of PDE]
+An expression of the form $\mathbf{F} \left( D^k (\mathbf{u}), D^{k-1} (\mathbf {u})), \ldots , D (\mathbf{u}), \mathbf{u} , x \right)=\mathbf{0}$ is called a $k$th order system of PDE, where $\mathbf{u} : \Omega \to \R ^m$ is the unknown, $\mathbf{u}= \left( u^1 , u^2 , \ldots, u^n \right)$ and $\mathbf{F} : \R ^{mN^k} \times \R ^{mN^{k-1}} \times \cdots \R ^{mN} \times \R ^m \times U \to \R ^m$ is given.
+    \label{def:system-of-pde}
+\end{definition}
 
+\subsubsection{Examples of PDEs}
+\begin{enumerate}
+    \item Linear Equations
+	\begin{description}
+	    \item[Laplace Equation] $\Delta u = \sum_{i=1}^{N} \partial _{{x_i}^{2}} u =0$ \begin{flushright}(linear, second order)\end{flushright}
+	    \item [Linear Transport Equation] $\partial_t u + \sum_{i=1}^{N} \partial_{x_i} u =0$ \begin{flushright}(linear, first order)\end{flushright}
+	    \item [Schrödinger's Equation] $i \partial_{t} u + \Delta u =0$ \begin{flushright}(linear, second order)\end{flushright}
+	    \item [Linear System : Maxwell's Equations]
+		\begin{align*}
+		    \partial_t E &=\text{curl } B \\
+		    \partial_t B &= - \text{curl } E \\
+		    \text{div } E &= \text{div } B =0
+		\end{align*}
+	\end{description}
+
+    \item Nonlinear equations
+	\begin{description}
+	    \item[Inviscid Burgers' equation] $\partial_{t} u + u \partial _x u = 0$
+	    \item [Eikonal equation] $|Du| = 1$
+	    \item [Nonlinear system: Navier-Stokes Equations] \begin{align*}\partial _t \mathbf{u} + \mathbf{u} \cdot D\mathbf{u} - \Delta \mathbf{u} &= -Dp  \\ \text{div } \mathbf{u} &=0\end{align*}
+	\end{description}
+\end{enumerate}
+
+\begin{definition}[Well posed]
+    A PDE is said to be \textit{well posed} if
+    \begin{description}
+	\item[(Existence)] it has at least one solution,
+	\item[(Uniqueness)] it has at most one solution and
+	\item[(Stability)] the solution depends continuously on the data given in the problem.
+    \end{description}
+    \label{def:well-posed}
+\end{definition}
+
+\begin{definition}
+    A \textit{classical solution} of the $k$-th order PDE is a function $u\in C^k (\Omega)$ which satisfies the equation pointwise
+    $$F\left( D^k u(x) , D^{k-1} u(x), \ldots , Du(x), u(x),x \right) =0$$
+    for all $x\in \Omega$.
+    \label{def:classical-solution}
+\end{definition}
+
+\begin{remark}
+    A classical solution may not always exist. For instance, the inviscid Burgers' equation does not have a solution.
+\end{remark}
+
+The course is divided into three parts:
+\begin{enumerate}[label=(\alph*)]
+    \item Representation Formulae for solutions
+    \item Linear PDE theory
+    \item Nonlinear PDE theory
+\end{enumerate}
+
+\subsection{Transport Equation}
+
+The PDE
+\begin{equation*}
+    \partial_t u + b \cdot Du = 0 \text{ in } \R ^n \times (0, \infty)
+\end{equation*}
+where $t\in (0, \infty ), x\in \R ^n$ are the independent variables, $u=u(t,x)$ is the dependent variable and $b=\left( b_1 ,b_2 , \ldots , b_n \right)$ and $Du = \left( \partial _ {x_1} u , \ldots , \partial _{x_2} u \right)$ is the gradient.
 
