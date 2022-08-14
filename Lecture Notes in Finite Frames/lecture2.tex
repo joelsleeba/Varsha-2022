@@ -1,0 +1,61 @@
+\section{Lecture 2 --- 12th August, 2022 --- A hell lot of definitions! (and some examples)}
+
+\subsection{Some definition and remarks on the definition of Frames}
+
+\begin{enumerate}
+    \item In \ref{eqn:def-frame}, $A,B$ are called the frame bounds.
+    \item The infimum (corr. supremum) over all the upper (corr. lower) frame bounds is called the optimal upper (corr. lower) frame bound.
+    \item The optimal frame bounds are also frame bounds! We can verify this in this fashion: Let $\beta$ be the optimal upper frame bound. Note that in equation (\ref{eqn:def-frame}) holds trivially for $f=0$. So, we need to only consider the case when $f\ne 0$. Let $B$ be any upper frame bound and $f$ be any nonzero vector. Then $\sum_{i} \norm{\ip{f}{f_i}}^2 \le B \norm{f}^2$. Since $f\ne 0$ by our choice,  $\sum_{i} \norm{\ip{f}{f_i}}^2 / \norm{f}^2 \le B$. Since $B$ is arbitrary, we have that $\sum_{i} \norm{\ip{f}{f_i}}^2 / \norm{f}^2 \le \beta$. Now since $f$ was arbitrary, out result follows. The almost same proof works for optimal lower bound as well!
+    \item If $A=B$ in equation \ref{eqn:def-frame} then frame is called a \textit{tight frame}.
+    \item If $A=B=1$ in equation \ref{eqn:def-frame} then the frame is called a \textit{Parseval frame} (as it will then satisfy the Parseval's identity).
+    \item A frame $\left\{ f_i \right\}$ is called \textit{equiangular} if there is a constant $C$ such that $|\ip{f}{f_i}|=C$ for all $i\ne j$.
+    \item A frame $\left\{ f_i \right\}_{i\in I}$ is called \textit{equal norm frame} if there is a constant $C$ such that $\norm{f_i}=C$ for all $i\in I$.
+    \item A frame $\left\{ f_i \right\} _{i\in I}$ is called a \textit{exact frame} if for any $j\in I$, $\left\{ f_i \right\} _{i \in I\setminus \{ j \}}$ is no longer a frame!
+    \item Let $\left\{ f_i \right\}_{i\in I}$ be a frame and $x\in H$. Then the values $\left\{ \ip{x}{f_i} \right\}_{i\in I}$ are called the \textit{frame coefficients} of $x$.
+    \item A sequence $\left\{ f_i \right\}_{i=1}^{N}$ is called a \textit{Bessel sequence} if there is a positive constant $ B$ such that $\sum_{i=1}^{N} |\ip{f}{f_i}| \le B \norm{f} ^2$ for all $f\in H$. 
+
+\end{enumerate}
+
+\subsection{Examples of Frames}
+In the following examples, let $\left\{ e_1 , e_2 , \ldots , e_n \right\}$ be orthonormal basis for $H$.
+\begin{enumerate}
+    \item Consider the list \\
+	$\left\{ e_1 / \sqrt{2} , e_1 / \sqrt{2} , e_2 / \sqrt{2} , e_2 / \sqrt{2}, \ldots , e_n / \sqrt{2} , e_n / \sqrt{2} \right\}$. Then
+	\begin{align*}
+	    \sum_{i=1}^{N} |\ip{f}{f_i}|^2 &= \frac{1}{2} \sum_{i=1}^{n} |\ip{f}{e_i}|
+	+ \frac{1}{2} \sum_{i=1}^{n} |\ip{f}{e_i}| \\
+	&= \sum_{i=1}^{n} |\ip{f}{e_i}|^2 = \norm{f}
+    \end{align*}
+    The last equality holds because $\left\{ e_i \right\}_{i=1}^{n} $ is an orthonormal basis. So the aforementioned list of vectors is a Parseval frame.
+    
+\item Consider the list $\left\{ e_1, e_1, e_2 , \ldots, e_n \right\}$. Then
+    \begin{align*}
+	\sum_{i=1}^{N} |\ip{f}{f_i}|^2 &= |\ip{f}{e_1}|^2 + \sum_{i=1}^{n} |\ip{f}{e_i}|^2 \\
+	&\le \norm{f}^2 + \norm{f}^2 \\
+	&= 2\norm{f}^2
+    \end{align*}
+    and 
+\begin{align*}
+	\sum_{i=1}^{N} |\ip{f}{f_i}|^2 &= |\ip{f}{e_1}|^2 + \sum_{i=1}^{n} |\ip{f}{e_i}|^2 \\
+	&\ge \norm{f}^2
+    \end{align*}
+    Thus, $\left\{ e_1, e_1 , e_2 , \ldots , e_n \right\}$ is a frame for $H$ with frame bounds $1$ and $2$. In fact the frame bounds are optimal, consider $f=e_1$ and $f=e_2$ and note the frame bounds are actually achieved!
+
+\item Consider $\left\{ e_1, e_1 , e_2, e_2 , \ldots , e_n , e_n \right\}$. Then this is a tight frame bound with bound $2$.
+\end{enumerate}
+
+\subsection{Properties of frames in finite dimensional Hilbert spaces}
+
+Note that the following lemma only holds for finite dimensional Hilbert space $H$.
+
+\begin{lemma}
+    Let $\left\{ f_i \right\}_{i\in I}$ be a family of vectors in $H$. Then
+    \begin{enumerate}[label=(\arabic*)]
+	\item If $\left\{ f_i \right\}_{i\in I}$ is an orthonormal basis, then $\left\{ f_i \right\}_{i\in I}$ is a Parseval frame but the converse may not be true!
+	\item $\left\{ f_i \right\}_{i\in I}$ is a frame for $H$ iff $\text{span } \left\{ f_i \right\} =H$
+	\item If $\left\{ f_i \right\}$ is a unit norm Parseval frame iff $\left\{ f_i \right\}_{i\in I}$ is an orthonormal basis for $H$.
+	\item $\left\{ f_i \right\}$ is exact then $\left\{ f_i \right\}$ is linearly independent.
+    \end{enumerate}
+    \label{lemma:prop-frames}
+\end{lemma}
+
