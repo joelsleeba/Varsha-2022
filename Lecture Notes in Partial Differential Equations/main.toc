@@ -7,4 +7,3 @@
 \contentsline {section}{\numberline {\S 2}Lecture 2 --- 16th August, 2022 --- Linear Transport Equation}{4}{section.2}%
 \contentsline {subsection}{\numberline {\S 2.1}Solution of an IVP}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {\S 2.2}Solution of a homogeneous problem}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {\S 2.3}Duhamel's Principle}{5}{subsection.2.3}%
