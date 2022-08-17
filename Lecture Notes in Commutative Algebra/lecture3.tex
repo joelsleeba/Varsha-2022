@@ -1,5 +1,5 @@
 \section{Lecture 3 --- 17th August, 2022 --- Proof of Prime Avoidance}
-\subsection{Proof of Prime Avoidance Lemma started\dots}
+\subsection{Proof of Prime Avoidance Lemma \ldots}
 \begin{proof}[Proof of \ref{lemma:prime-avoidance}]
     We prove that the following equivalent statement that:
     
@@ -35,6 +35,8 @@
 
 \end{proof}
 
+\subsection{Jacobson Radical \& Local Rings revisited\ldots }
+
 \begin{notation}
     Let $A$ be a ring. We will use $\text{max-spec} (A)$ to denote the set of all maximal ideals of $A$.
 \end{notation}
@@ -59,3 +61,21 @@
 
     $\left( \Longleftarrow \right)$ Now suppose that $1-xy$ is a unit for all $y\in A$. If $x\not \in \calJ (A)$ then there must be some maximal ideal $m$ of $A$ such that $x\in A\setminus m$. Now consider the ideal $m + (x)$. Clearly $m + (x) \supsetneq m$ for otherwise $x\in m$. Hence $m+ (x)=A$ as $m$ is a maximal ideal. Thus there are some elements $z\in m$ and $y \in A$ such that $z+xy =1$. But then $1-xy = z \in m$. Also, $1-xy$ is a unit, but that cannot possibly happen as maximal ideals cannot contain units!
 \end{proof}
+
+\begin{lemma}
+    Let $A$ be a ring and $m$ be a nontrivial ideal such that every element of $A\setminus m$ is a unit. Then $\left( A, m \right)$ is a local ring.
+    \label{lemma:sufficient-local}
+\end{lemma}
+\begin{proof}
+    Let $I$ be any nontrivial ideal of $A$. To show that $\left( A,m \right)$ is a local ring, it suffices to show that that $I \subset m$. Let $x\in I$. If $x\not \in m$ then $x$ must be a unit by hypothesis. But that is not possible as $I$ is not trivial and hence $I \subset m$. Thus, $(A, m)$ is a local ring.
+\end{proof}
+
+\begin{lemma}
+    Let $A$ be a ring, $m$ be a maximal ideal. If every element of $1+m$ is a unit then $(A,m)$ is local.
+    \label{lemma:sufficient-local-2}
+\end{lemma}
+\begin{proof}
+    By lemma \ref{lemma:sufficient-local}, it suffices to show that every element of $A\setminus m$ is a unit. So let $x\in A \setminus m$. Then $\left( x \right) + m = A $as $m$ is a maximal ideal. So, there are elements $y\in A$ and $z\in m$ such that $1=xy+z$. Then $xy = 1-z \in 1+m$ and hence $xy$ is a unit. Since $xy$ is a unit, there is some $u \in A$ such that $(xy)u= u(xy)=1$. But by associativity and commutativity, we have that $x(yu)=(yu)x=1$ and hence $x$ is a unit.
+\end{proof} 
+
+\subsection{Introduction to Modules}

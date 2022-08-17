@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  17 AUG 2022 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  17 AUG 2022 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,18 +659,18 @@ File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]) (./lecture2.tex [
 4])
-(./lecture3.tex [5]) [6] (./main.aux)
+(./lecture3.tex [5] [6]) [7] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F6C102159DEADABCB91AE39BAD86A000;720.
+(rerunfilecheck)             Checksum: 0C524E6A00E19045DC782D310CBAD0DF;881.
  ) 
 Here is how much of TeX's memory you used:
- 8675 strings out of 479304
- 126106 string characters out of 5869780
- 461403 words of memory out of 5000000
- 25629 multiletter control sequences out of 15000+600000
+ 8684 strings out of 479304
+ 126248 string characters out of 5869780
+ 461467 words of memory out of 5000000
+ 25633 multiletter control sequences out of 15000+600000
  490407 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,9n,74p,658b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,9n,74p,675b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/share/texlive/texmf-dis
@@ -681,10 +681,10 @@ ublic/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/ut
 opia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (6 pages, 102932 bytes).
+Output written on main.pdf (7 pages, 106332 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 169 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
