@@ -7,7 +7,7 @@ where $b\in \R ^n$ is a fixed vector and $u: \R ^n \times [0, \infty ) \to \R$ i
 Let $(x,t) \in \R ^n \times (0, \infty)$ be fixed. Our aim is to obtain a representation of the solution.
 
 Assuming that $u$ is a smooth function, we define the function $z(s):= u(x+bs,t+s)$ where $s\in \R$.
-
+git 
 Note that $z$ is the restriction of the function $u$ to the line $L=\left\{ \left( x+bs, t+s  \right) : s \in \R \right\}$. Note that the line $L$ passes through $(x,t)$ and is in the direction of the vector $(b,1)$.
 
 Differentiating $z$, we have that for all $s\in \R$, 
@@ -17,7 +17,9 @@ Differentiating $z$, we have that for all $s\in \R$,
 
 Thus, $u$ is a constant on the line $L$. If we know the solution at any point on $L$, the problem is solved. We use the aforementioned result in the following subsection.
 
-\subsection{Solution of an IVP}
+
+
+\subsection{Solution of a homogeneous IVP}
 
 Let $g: \R ^n \to \R$ where $g=g(x_1, x_2 ,\ldots , x_n)$. We consider the following IVP
 \begin{align*}
@@ -42,7 +44,9 @@ So, \boxed{u(x,t) = g(x-bt) \qquad t \ge 0, x\in \R ^n}.
     Draw the $x$ versus $u$ sketch when $n=1$ and taking $t=0$ and $t=1$ and notice the solution gets translated or transported and hence the name of the PDE is linear transport equation.
 \end{remark}
 
-\subsection{Solution of a homogeneous problem}
+
+
+\subsection{Solution of a non  homogeneous problem}
 Consider the problem
 \begin{align*}
     u_t + b\cdot Du &= f \quad \text{ in } \R ^n \times (0,\infty ) \\
@@ -54,7 +58,7 @@ Take any $\left( x,t \right) \in \R ^n \times \left( 0, \infty \right)$ and defi
 Hence, $z'(s) = u_t (x+sb, t+s ) + b \cdot Du (x+sb, t+s) = f(x+sb , t+s )$. So,
 
 \begin{align*}
-    u(x,t)-g(x-tb) &= z(0) - z(-t) \\
+    u(x,t)-g(x-tb) = u(x,t)-u(x-tb,0) &= z(0) - z(-t) \\
     &= \int_{-t}^{0} z'(s) ds \\
     &= \int_{-t}^{0} f\left( x+sb, t+s \right) ds \\
     &= \int_{0}^{t} f\left( x+(s-t)b, s \right) ds
