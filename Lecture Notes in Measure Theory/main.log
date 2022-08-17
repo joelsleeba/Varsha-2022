@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  12 AUG 2022 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  16 AUG 2022 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,7 +676,7 @@ ublic/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/u
 topia/putb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (5 pages, 95889 bytes).
+Output written on main.pdf (5 pages, 96050 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams
