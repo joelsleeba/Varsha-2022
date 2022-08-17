@@ -37,27 +37,33 @@
             F\left( D^{k} u(x), D^{k-1} u(x), \ldots , Du(x), x \right)=0 \qquad (x\in \Omega)
             \label{eqn:pde}
         \end{equation}
+
     is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may assume $F: \R ^{N^k} \times \R^{N^{k-1}} \times \cdot \times \R ^N \times \Omega \to \R$ is a given smooth function.
+
     \begin{remark}
         Note that $u$ being a real valued function will be mapped into $\R$, while the $D(u)$ will have $k$ components each corresponding to the derivatives $\wrt$ to each index of the preimage $x$ of $u(x)$
     \end{remark}
+
 \end{definition}
 
 
 
 \subsubsection{Classifications of PDE}
 \begin{enumerate}[label=(\roman*)]
+
     \item The PDE (\ref{eqn:pde}) is called \textit{linear} if it has the form $$\sum_{0\le |\alpha| \le k} a_{\alpha} (x) D^{\alpha} u =f$$ 
     \begin{flushright}
      $\ie$ each summand should have a degree less than $k$
     \end{flushright}
-
 	for some functions $a_{ \alpha }$, f. The linear PDE is homogeneous if $f=0$.
-\item The PDE (\ref{eqn:pde}) is called \textit{semilinear} if it has the form
-    $$\sum_{|\alpha|=k} a_{\alpha}(x) D^{\alpha}u + a_0 \left( D^{k-1}u, \ldots , Du, u, x \right) =0$$
-\item The PDE (\ref{eqn:pde}) is called \textit{quasilinear} if it has the form 
-    $$\sum_{|\alpha =k} a_{\alpha} (D^{k-1} u, \ldots , Du, u, x) D^{\alpha} u + a_0 \left( D^{k-1} u, \ldots , Du, u, x \right) = 0$$
-\item The PDE (\ref{eqn:pde}) is called \textit{nonlinear} if the PDE has a nonlinear dependence on the highest order derivative.
+
+    \item The PDE (\ref{eqn:pde}) is called \textit{semilinear} if it has the form
+        $$\sum_{|\alpha|=k} a_{\alpha}(x) D^{\alpha}u + a_0 \left( D^{k-1}u, \ldots , Du, u, x \right) =0$$
+
+    \item The PDE (\ref{eqn:pde}) is called \textit{quasilinear} if it has the form 
+        $$\sum_{|\alpha =k} a_{\alpha} (D^{k-1} u, \ldots , Du, u, x) D^{\alpha} u + a_0 \left( D^{k-1} u, \ldots , Du, u, x \right) = 0$$
+
+    \item The PDE (\ref{eqn:pde}) is called \textit{nonlinear} if the PDE has a nonlinear dependence on the highest order derivative.
 
 \end{enumerate}
 
@@ -70,17 +76,22 @@ An expression of the form $\mathbf{F} \left( D^k (\mathbf{u}), D^{k-1} (\mathbf 
 
 \subsubsection{Examples of PDEs}
 \begin{enumerate}
+
     \item Linear Equations
 	\begin{description}
 	    \item[Laplace Equation] $\Delta u = \sum_{i=1}^{N} \partial _{{x_i}^{2}} u =0$ \begin{flushright}(linear, second order)\end{flushright}
+
 	    \item [Linear Transport Equation] $\partial_t u + \sum_{i=1}^{N} \partial_{x_i} u =0$ \begin{flushright}(linear, first order)\end{flushright}
+
 	    \item [Schrödinger's Equation] $i \partial_{t} u + \Delta u =0$ \begin{flushright}(linear, second order)\end{flushright}
+
 	    \item [Linear System : Maxwell's Equations]
 		\begin{align*}
 		    \partial_t E &=\text{curl } B \\
 		    \partial_t B &= - \text{curl } E \\
 		    \text{div } E &= \text{div } B =0
 		\end{align*}
+
 	\end{description}
 
     \item Nonlinear equations
@@ -89,6 +100,7 @@ An expression of the form $\mathbf{F} \left( D^k (\mathbf{u}), D^{k-1} (\mathbf 
 	    \item [Eikonal equation] $|Du| = 1$
 	    \item [Nonlinear system: Navier-Stokes Equations] \begin{align*}\partial _t \mathbf{u} + \mathbf{u} \cdot D\mathbf{u} - \Delta \mathbf{u} &= -Dp  \\ \text{div } \mathbf{u} &=0\end{align*}
 	\end{description}
+
 \end{enumerate}
 
 \begin{definition}[Well posed]
