@@ -1,37 +1,57 @@
 \section{Lecture 1 --- 11th August, 2022 --- Definition, Classifications \& Examples of PDEs}
+
+
+
 \subsection{Notations}
 \begin{itemize}[label=--]
     \item Let $\N _0$ be defined to be the set $\N \cup \left\{ 0 \right\}$. For any $N\in \N$, an element of $\N _ 0 ^N$ to be an \textit{multiindex}. If $\alpha \in \N _0 ^N$ then $\alpha = \left( \alpha _1 ,\alpha_2,\ldots, \alpha_N \right)$ for some $\alpha_i \in \N _0$.
 
     \item For any $x\in \R ^N$ and $N\in \N$, we define $x^\alpha = x_1 ^{\alpha_1}\cdots x_N ^{\alpha _N}$.
 
+    \item We will denote $\Omega \subset \R ^N$ to be an open subset.
+
     \item Given any multiindex $\alpha \in \N _0 ^N$, we define $|\alpha | =\alpha_1 + \alpha _2 + \ldots + \alpha _N$.
 
     \item Given any multiindex $\alpha$, we define
-\begin{equation*}
-    D^{\alpha} := \frac{\partial ^{|\alpha|}}{\partial {x_{1}} ^{\alpha_1} \cdots \partial {x_{N}} ^{\alpha_N}} = \partial { x_1 }^{\alpha _1}\cdots \partial { x_N }^{\alpha_N}
-\end{equation*}
+    \begin{equation*}
+        D^{\alpha} := \frac{\partial ^{|\alpha|}}{\partial_{x_{1}} ^{\alpha_1} \cdots \partial_{x_{N}} ^{\alpha_N}} = \partial_{ x_1 }^{\alpha _1}\cdots \partial_{ x_N }^{\alpha_N}
+    \end{equation*}
 
-\item For any $k\in \N$, denote $D^k =\left\{ D^{\alpha} : |\alpha| =k \right\}$
+    $\ie$ for all $x\in \Omega$
+    \begin{equation*}
+        D^{\alpha}(u) := \frac{\partial ^{|\alpha|}(u)}{\partial_{x_{1}} ^{\alpha_1} \cdots \partial_{x_{N}} ^{\alpha_N}} = \partial_{ x_1 }^{\alpha _1}\cdots \partial_{ x_N }^{\alpha_N}(u)
+    \end{equation*}
 
-\item We will denote $\Omega \subset \R ^N$ to be an open subset.
-
+    \begin{remark}
+    Note that it is by the \href{'https://calculus.subwiki.org/wiki/Clairaut's_theorem_on_equality_of_mixed_partials'}{Clairaut's theorem on equality of mixed partials} that we can club together the derivatives $\wrt$ one index without worrying about the order in which they are differentiated.
+    \end{remark}
+    \item For any $k\in \N$, denote $D^k =\left\{ D^{\alpha} : |\alpha| =k \right\}$
 \end{itemize}
+
+
 
 \subsection{Definition,  Classification \& Examples}
 \begin{definition}[Partial Differential Equation]
-Let $\Omega$ be an open subset of $\R ^N$. An expression of the form  
-\begin{equation}
-    F\left( D^{k} u(x), D^{k-1} u(x), \ldots , Du(x), x \right)=0 \qquad (x\in \Omega)
-    \label{eqn:pde}
-\end{equation}
-is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may assume $F: \R ^{N^k} \times \R^{N^{k-1}} \times \cdot \times \R ^N \times \Omega \to \R$ is a given smooth function.
-
+    Let $\Omega$ be an open subset of $\R ^N$. An expression of the form  
+        \begin{equation}
+            F\left( D^{k} u(x), D^{k-1} u(x), \ldots , Du(x), x \right)=0 \qquad (x\in \Omega)
+            \label{eqn:pde}
+        \end{equation}
+    is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may assume $F: \R ^{N^k} \times \R^{N^{k-1}} \times \cdot \times \R ^N \times \Omega \to \R$ is a given smooth function.
+    \begin{remark}
+        Note that $u$ being a real valued function will be mapped into $\R$, while the $D(u)$ will have $k$ components each corresponding to the derivatives $\wrt$ to each index of the preimage $x$ of $u(x)$
+    \end{remark}
 \end{definition}
+
+
 
 \subsubsection{Classifications of PDE}
 \begin{enumerate}[label=(\roman*)]
     \item The PDE (\ref{eqn:pde}) is called \textit{linear} if it has the form $$\sum_{0\le |\alpha| \le k} a_{\alpha} (x) D^{\alpha} u =f$$ 
+    \begin{flushright}
+     $\ie$ each summand should have a degree less than $k$
+    \end{flushright}
+
 	for some functions $a_{ \alpha }$, f. The linear PDE is homogeneous if $f=0$.
 \item The PDE (\ref{eqn:pde}) is called \textit{semilinear} if it has the form
     $$\sum_{|\alpha|=k} a_{\alpha}(x) D^{\alpha}u + a_0 \left( D^{k-1}u, \ldots , Du, u, x \right) =0$$
@@ -45,6 +65,8 @@ is called a $k$th order PDE for the unknown function $u:\Omega \to \R$. One may 
 An expression of the form $\mathbf{F} \left( D^k (\mathbf{u}), D^{k-1} (\mathbf {u})), \ldots , D (\mathbf{u}), \mathbf{u} , x \right)=\mathbf{0}$ is called a $k$th order system of PDE, where $\mathbf{u} : \Omega \to \R ^m$ is the unknown, $\mathbf{u}= \left( u^1 , u^2 , \ldots, u^n \right)$ and $\mathbf{F} : \R ^{mN^k} \times \R ^{mN^{k-1}} \times \cdots \R ^{mN} \times \R ^m \times U \to \R ^m$ is given.
     \label{def:system-of-pde}
 \end{definition}
+
+
 
 \subsubsection{Examples of PDEs}
 \begin{enumerate}
@@ -96,6 +118,8 @@ The course is divided into three parts:
     \item Linear PDE theory
     \item Nonlinear PDE theory
 \end{enumerate}
+
+
 
 \subsection{Transport Equation}
 
