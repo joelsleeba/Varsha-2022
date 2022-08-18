@@ -38,7 +38,7 @@
 	    \item $\mu$ is monotone.
 	    \item the inclusion-exclusion formula holds.
 	    \item $\mu$ is finitely subadditive. $\ie$ $\mu \left( A_1 \cup A_2 \cup \ldots \cup A_n \right) \le \sum_{i=1}^{k} \mu (A_k)$ for $A_1, A_2, \ldots , A_k \in \calF	$.
-	    \item $\mu$ is continuous from above, that is, if $\left( A_n \right) \subset \calF$ such that $A_n \supset A_{n+1}$ for all $n\in\N$ and $\mu (A_{n_0}) < +\infty$ for some $n_0$ then $\lim \mu(A_n) = \mu \left( \bigcap_n A_n \right)$.
+	    \item $\mu$ is continuous from above, that is, if $\left( A_n \right) \subset \calF$ such that $A_n \supset A_{n+1}$ for all $n\in\N$ and $\mu (A_{n_0}) < +\infty$ for some $n_0$ then $\lim_{n \to \infty} \mu(A_n) = \mu \left( \bigcap_n A_n \right)$.
 	    \item $\mu$ is countably subadditive, that is, if $\left\{ A_n \right\}_{n\in \N}\subset \calF$ then $\mu \left(\cup_n A_n \right) \le \sum_{i=1}^{\infty} \mu \left( A_n \right)$
     \end{enumerate}
 \end{theorem}
@@ -49,26 +49,42 @@
 
         \item Now, we prove that the inclusion exclusion formula holds for $\mu$. Let $A, B\in \calF$. If both $\mu(A) = +\infty$ and $\mu (B) = + \infty$ then there is nothing to prove. So, assume without loss of generality that $\mu (A) < \infty$. Then $\mu (A \cap B) < \infty$.  Then
         \begin{align*}
-	        \mu (A \cup B) + \mu (A\cap B) &= \mu (A) + \mu (B \setminus A) + \mu (B\cap A)  \\
-	        &= \mu (A) + (\mu (B \setminus A) + \mu (B\cap A))  \\
-	        &= \mu (A) + \mu (B)
+            \mu (A \cup B) + \mu (A\cap B) &= \mu (A) + \mu (B \setminus A) + \mu (B\cap A)  \\
+            &= \mu (A) + (\mu (B \setminus A) + \mu (B\cap A))  \\
+            &= \mu (A) + \mu (B)
         \end{align*}
 
         \item Now, finite subadditivity follows immediately from inclusion-exclusion formula and induction.
 
-        \item We now prove that $\mu$ is continuous from above. Let $\left\{ A_n \right\}$ be a sequence of decreasing sequence sets with $\mu (A_1) < \infty$. Then we have that $\mu (A_n) \le \mu (A_1) < \infty$. Define $B_n = A_1 \setminus A_n$ and $B=A_1 \setminus \bigcap_n A_n$. It is easy to see that $B_n \uparrow B$ (draw pictures!). From Theorem \ref{thm:equiv-measure} (continuity from below), we have that $\lim \mu (B_n ) = \mu (B)$.   
+        \item We now prove that $\mu$ is continuous from above. Let $\left\{ A_n \right\}$ be a sequence of decreasing sequence sets with $\mu (A_1) < \infty$. Then we have that $\mu (A_n) \le \mu (A_1) < \infty$. Define $B_n = A_1 \setminus A_n$ and $B=A_1 \setminus \bigcap_n A_n$. It is easy to see that $B_n \nearrow B$ (draw pictures!). %From Theorem \ref{thm:equiv-measure} (continuity from below), we have that $\lim \mu (B_n ) = \mu (B)$.   
+        Now by definition of $B_n$, $\mu (B_n ) = \mu (A_1) - \mu (A_n )$. \\
+        Also, 
+        \begin{align*}
+            \mu (B)    &= \lim_{n \to \infty} \mu (B_n) & \text{(By continuity from below, See } \ref{thm:equiv-measure}) \\ 
+                       &= \mu (A_1) - \lim_{n \to \infty} \mu (A_n) & \text{(by definiton of } B_n) \\
+        \end{align*}
 
-        Now, observe that $\mu (B_n ) = \mu (A_1) - \mu (A_n )$ for each $n$. So, $\mu (B) = \lim \mu (B_n) = \mu (A_1) - \lim \mu (A_n)$. 
+        Again by definiton of $B$ $\mu (B) = \mu (A_1) - \mu (\bigcap_n A_n )$. Equating this with the above equation we see that $\lim_{n \to \infty} \mu (A_n ) = \mu \left( \bigcap_n A_n \right)$. 
 
-        Also, we have that $\mu (B) = \mu (A_1) - \mu (\cap_n A_n )$. Hence, we have that $\lim \mu (A_n ) = \mu \left( \cap_n A_n \right)$. 
-
-        We now prove that $\mu$ is countably subadditive. Let $\left\{ A_n \right\}$ be a sequence of elements from $\calF$. Then $B_k := \cup_{n=1}^{k} A_n \uparrow \cup_{n} A_n$. By continuity from below, we have that $\mu \left( \cup_n A_n \right) = \lim_k \mu (B_k) \le \lim_k \left( \mu (A_1) + \mu (A_2) + \ldots + \mu (A_k) \right)= \sum_{k=1}^{\infty} \mu (A_k)$. Note that the inequality is due to finite subadditivity.
+        \item We now prove that $\mu$ is countably subadditive. Let $\left\{ A_n \right\}$ be a sequence of elements from $\calF$. Define $B_k = \bigcup_{n=1}^{k} A_n$. Clearly $B_k \nearrow \bigcup_{n} A_n$.
+        Then, 
+        \begin{align*}
+            \mu \left( \bigcup_n A_n \right) &= \mu \left( \bigcup_n B_n \right) & \\
+                                          &= \lim_{k \to \infty} \mu (B_k) & \text{(by continuity from below, See } \ref{thm:equiv-measure}) \\ 
+                                          &\le \lim_{k \to \infty} \left( \mu(A_1) + \mu(A_2) + \ldots + \mu(A_k) \right) & \text{(by finite subadditivity)} \\
+                                          &= \sum_{k=1}^{\infty} \mu (A_k)
+        \end{align*}
+        %By continuity from below, we have that $\mu \left( \cup_n A_n \right) = \lim_k \mu (B_k) \le \lim_k \left( \mu (A_1) + \mu (A_2) + \ldots + \mu (A_k) \right)= \sum_{k=1}^{\infty} \mu (A_k)$. Note that the inequality is due to finite subadditivity.
     \end{enumerate}
 \end{proof}
 
 \begin{definition}
-    A collection $\calC$ of subsets of $\Omega$ is called a \textit{semialgebra} if $\calC$ is closed under finite-$\cap$ and if $A\in \calC$ then there exists some $B_1, B_2 , \ldots , B_n \in \calC$, pairwise disjoint, such that $A^c = \cup_{i=1}^{n} B_i$.
     \label{def:semialgebra}
+    A collection $\calC$ of subsets of $\Omega$ is called a \emph{semialgebra} if 
+    \begin{itemize}
+        \item $\calC$ is closed under finite intersections
+        \item if $A\in \calC$ then there exists some $B_1, B_2 , \ldots , B_n \in \calC$, pairwise disjoint, such that $A^c = \bigcup_{i=1}^{n} B_i$.
+    \end{itemize}
 \end{definition}
 
 \begin{exercise}
