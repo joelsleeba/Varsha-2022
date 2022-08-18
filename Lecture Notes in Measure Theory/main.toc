@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 \contentsline {section}{\numberline {\S 1}Lecture 1 --- 10th August 2022 --- Review of things done in the previous semester\ldots }{1}{section.1}
 \contentsline {subsection}{\numberline {\S 1.1}Definitions and Some Results}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {\S 1.2}Dynkin's pi-lambda theorem; Measures and their properties}{3}{subsection.1.2}
 \contentsline {section}{\numberline {\S 2}Lecture 2 --- 12th August 2022 --- Properties of Measures and Definition of semialgebra}{4}{section.2}
 \contentsline {subsection}{\numberline {\S 2.1}Properties of Measures}{4}{subsection.2.1}
+=======
+\contentsline {section}{\numberline {\S 1}Lecture 1 --- 10th August 2022 --- Review of things done in the previous semester\ldots }{1}{section.1}%
+\contentsline {subsection}{\numberline {\S 1.1}Definitions and Some Results}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {\S 1.2}Dynkin's pi-lambda theorem; Measures and their properties}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {\S 2}Lecture 2 --- 12th August 2022 --- Properties of Measures and Definition of semialgebra}{3}{section.2}%
+\contentsline {subsection}{\numberline {\S 2.1}Properties of Measures}{4}{subsection.2.1}%
+\contentsline {section}{\numberline {\S 3}Lecture 3 --- From semialgebra to algebra, measurable sets\ldots }{5}{section.3}%
+\contentsline {subsection}{\numberline {\S 3.1}Extension of measures from semialgebras to algebras}{6}{subsection.3.1}%
+>>>>>>> source/main
