@@ -92,3 +92,29 @@ Then $\calF \left( \calC \right) = \calA \left( \calC \right)$.
     
 This completes the proof of countable additivity. The proof of finite additivity follows from countable subadditivity.
 \end{proof}
+
+\subsection{Outer Measures}
+
+\begin{definition}
+    Given a measure $\mu$ on a semialgebra $\calC$, the \textit{outer measure induced by $\mu$} is the set function $\mu ^{*}$ defined on $\calP \left( \Omega \right)$ as
+    \begin{equation*}
+	\mu ^{*} \left( A \right) := \inf \left\{ \sum_{n=1}^{\infty} \mu (A_n) : \left\{ A_n \right\} _{n\ge 1} \subset \calC , A \subset \cup_{n \ge 1} A_n \right\}
+	\label{eqn:outer-measure}
+    \end{equation*}
+    \label{def:outer-measure}
+\end{definition}
+
+We'd like to remark that $\mu ^{*}$ is not an overestimate, that is, $\mu ^{*} = \mu$ on $\calC$ and $\mu ^{*} = \overline \mu$ on $\calA$.
+
+To verify this remark, let $C \in \calC$. We need to show that $\mu ^{*} (C) = \mu (C)$. Clearly by definition of $\mu ^{*}$, we have that $\mu ^{*} \left( C \right) \le \mu \left( C \right)$. (Fill the details!)
+
+\begin{definition}
+    A set $A$ is said to be \textit{$\mu^{*}$-measurable} if 
+    \begin{equation*}
+	\mu ^{*} \left( E \right) = \mu ^{*} (A\cap E ) + \mu ^{*} (A^c \cap E) \text{ for all } E \subset \Omega 
+    \end{equation*}
+    The set of all $\mu ^{*}$-measurable sets is denoted by $\calM _{\mu ^{*}}$.
+    \label{def:measurable-set}
+\end{definition}
+
+
