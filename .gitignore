@@ -2,6 +2,7 @@
 *.aux
 *.toc
 *synctex*
+*.sh
 *.latexmain
 !.tex
 !.pdf
