@@ -8,4 +8,7 @@ git push -u my-repo pre-edit
 git checkout main
 git merge pre-edit
 git push -u my-repo main
-git checkout pre-edit
+
+git checkout source
+git pull source main
+git push -u my-repo source
