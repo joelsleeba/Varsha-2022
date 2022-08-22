@@ -1,5 +1,5 @@
-\section{Lecture 3 --- 17th August, 2022 --- Proof of Prime Avoidance}
-\subsection{Proof of Prime Avoidance Lemma \ldots}
+\section{Lecture 3 --- 17th August, 2022 --- Proof of Prime Avoidance, Jacobson Radical, Modules}
+\subsection{Proof of Prime Avoidance Lemma}
 \begin{proof}[Proof of \ref{lemma:prime-avoidance}]
     We prove that the following equivalent statement that:
     
@@ -35,7 +35,7 @@
 
 \end{proof}
 
-\subsection{Jacobson Radical \& Local Rings revisited\ldots }
+\subsection{Jacobson Radical \& Local Rings revisited}
 
 \begin{notation}
     Let $A$ be a ring. We will use $\text{max-spec} (A)$ to denote the set of all maximal ideals of $A$.
@@ -79,3 +79,35 @@
 \end{proof} 
 
 \subsection{Introduction to Modules}
+
+\begin{definition}
+    Let $A$ be a ring. An $A$-module is a abelian group $M$ with a multiplication map
+    $$\cdot \, : A\times M \to M $$
+    $$(a \cdot x ) \mapsto ax$$
+    satisfying
+    \begin{enumerate}[label=(\roman*)]
+	\item $a(x+y)=ax+ay$ for all $a\in A$ and $x,y \in M$,
+	\item $\left( a+b \right) x = ax+bx$ for all $a,b\in A$ and $x\in M$,
+	\item $(ab)x=a(bx)$ for all $a,b\in A$ and $x\in M$,
+	\item $1_A x = x$ for $x\in M$.
+    \end{enumerate}
+    \label{def:module}
+
+\end{definition}
+
+Alternatively, an $A$-module is an abelian group $M$ together with a ring homomorphism $\varphi : A \to \text{End} (M)$ where $\text{End} (M)$ is the ring of endomorphism of the abelian group $M$. Recall that sum in the ring $\text{End} (M)$ is given pointwise and the multiplication is given by function composition. 
+
+To check the equivalence of two definitions, let $M$ be a $A$-module in the sense of Definition \ref{def:module}. Define a map $\varphi : A \to \text{End} (M)$ by $a \stackrel{\varphi}{\mapsto} \varphi _a$ where $\varphi_a : M \to M$ given by $\varphi _a (m ) = am$ for every $m \in M$. It is now easily seen that $\varphi$ is a ring homomorphism. Conversely, let $M$ be a module in the sense of previous paragraph. Now, define $\cdot : A \to M \times M$ by $(a \cdot m ) = (\varphi (a)) (m)$. It is easy to check the properties (i)--(iv) of Definition \ref{def:module}.
+
+\begin{definition}
+    A $A$-module $M$ is said to be \textit{faithful} if the map $\varphi : A \to \text{End} (M)$ is injective.
+    \label{def:module-faithful}
+\end{definition}
+
+\begin{example}
+Here are a few examples of modules:
+    \begin{enumerate} 	\item Every vector space over a field $k$ is a $k$-module.
+	\item Every abelian group is a $\Z$-module.
+    \end{enumerate}
+\end{example}
+
