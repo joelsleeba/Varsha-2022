@@ -5,7 +5,7 @@
 
     ($\implies$) Suppose that $\mu$ is a measure. We first show that $\mu$ is finitely additive. Let $A, B \in \calF$ and suppose that $A\cap B=\emptyset$. Let $A_1 =A $ and $A_2 =B$ and $A_n = \emptyset$ for all $n\ge 3$. Then $\mu (A\cup B) = \mu \left( \cup_{i\in\N} A_i \right) = \sum_{i\in\N} \mu (A_i) = \mu (A) + \mu (B)$ as $\mu (\emptyset ) =0$. 
 
-    We now prove that $\mu$ is continuous from below. Let $\left\{ A_n \right\}$ be a nondecreasing sequence of elements from $\calF$. $\ie \ A_n \subset A_{n+1}$ for all $n \in \N$. Define $B_1=A_1$ and $B_n = A_n \setminus A_{n-1}$ for each $n\ge 2$. Clearly, $\bigcup_n B_n = \bigcup_n A_n$ and $B_n \bigcap B_m = \emptyset$ for all $m\ne n$.
+    We now prove that $\mu$ is continuous from below. Let $\left\{ A_n \right\}$ be a nondecreasing sequence of elements from $\calF$. $\ie \ A_n \subset A_{n+1}$ for all $n \in \N$. We'll disjointify this collection. Define $B_1=A_1$ and $B_n = A_n \setminus A_{n-1}$ for each $n\ge 2$. Clearly, $\bigcup_n B_n = \bigcup_n A_n$ and $B_n \bigcap B_m = \emptyset$ for all $m\ne n$.
 
     \begin{align*}
         \mu \left( \bigcup_{n \in \N} A_n \right) &= \mu \left( \bigcup_{n \in \N} B_n \right) &\\
@@ -38,7 +38,7 @@
 	    \item $\mu$ is monotone.
 	    \item the inclusion-exclusion formula holds.
 	    \item $\mu$ is finitely subadditive. $\ie$ $\mu \left( A_1 \cup A_2 \cup \ldots \cup A_n \right) \le \sum_{i=1}^{k} \mu (A_k)$ for $A_1, A_2, \ldots , A_k \in \calF	$.
-	    \item $\mu$ is continuous from above, that is, if $\left( A_n \right) \subset \calF$ such that $A_n \supset A_{n+1}$ for all $n\in\N$ and $\mu (A_{n_0}) < +\infty$ for some $n_0$ then $\lim_{n \to \infty} \mu(A_n) = \mu \left( \bigcap_n A_n \right)$.
+	    \item $\mu$ is continuous from above, $\ie$ if $\left( A_n \right) \subset \calF$ such that $A_{n+1} \subset A_{n}$ for all $n\in\N$ and $\mu (A_{1}) < +\infty$, then $\lim_{n \to \infty} \mu(A_n) = \mu \left( \bigcap_n A_n \right)$.
 	    \item $\mu$ is countably subadditive, that is, if $\left\{ A_n \right\}_{n\in \N}\subset \calF$ then $\mu \left(\cup_n A_n \right) \le \sum_{i=1}^{\infty} \mu \left( A_n \right)$
     \end{enumerate}
 \end{theorem}
@@ -49,8 +49,7 @@
 
         \item Now, we prove that the inclusion exclusion formula holds for $\mu$. Let $A, B\in \calF$. If both $\mu(A) = +\infty$ and $\mu (B) = + \infty$ then there is nothing to prove. So, assume without loss of generality that $\mu (A) < \infty$. Then $\mu (A \cap B) < \infty$.  Then
         \begin{align*}
-            \mu (A \cup B) + \mu (A\cap B) &= \mu (A) + \mu (B \setminus A) + \mu (B\cap A)  \\
-            &= \mu (A) + (\mu (B \setminus A) + \mu (B\cap A))  \\
+            \mu (A \cup B) + \mu (A\cap B) &= \mu (A) + \mu (B \setminus A) + \mu (A \cap B)  \\
             &= \mu (A) + \mu (B)
         \end{align*}
 
@@ -64,7 +63,7 @@
                        &= \mu (A_1) - \lim_{n \to \infty} \mu (A_n) & \text{(by definiton of } B_n) \\
         \end{align*}
 
-        Again by definiton of $B$ $\mu (B) = \mu (A_1) - \mu (\bigcap_n A_n )$. Equating this with the above equation we see that $\lim_{n \to \infty} \mu (A_n ) = \mu \left( \bigcap_n A_n \right)$. 
+        Again by definiton of $B$, $\mu (B) = \mu (A_1) - \mu (\bigcap_n A_n )$. Equating this with the above equation we see that $\lim_{n \to \infty} \mu (A_n ) = \mu \left( \bigcap_n A_n \right)$. 
 
         \item We now prove that $\mu$ is countably subadditive. Let $\left\{ A_n \right\}$ be a sequence of elements from $\calF$. Define $B_k = \bigcup_{n=1}^{k} A_n$. Clearly $B_k \nearrow \bigcup_{n} A_n$.
         Then, 
