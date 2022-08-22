@@ -12,3 +12,5 @@ git push -u my-repo main
 git checkout source
 git pull source main
 git push -u my-repo source
+
+git checkout pre-edit
