@@ -1,3 +1,5 @@
+## Depreciated
+# Use shellscripts/Varsha-2022-repoconf.sh
 read -p "Enter your username:" Name
 read -p "Enter your email ID:" MailID
 
@@ -35,9 +37,12 @@ git config user.name "$Name"
 git config user.email "$MailID"
 
 git checkout main
-git remote add my-repo git@github.com:joelsleeba/Varsha-2022
+git remote add my-repo git@github.com:joelsleeba/Varsha-2022.git
 git fetch --all
 git pull --all
-git checkout pre-edit
+git checkout my-repo/pre-edit
+git switch -c pre-edit
+git checkout my-repo/source
+git switch -c source
 git remote add source https://github.com/ashishKujur7/Lecture-Notes.git
 git remote remove origin
