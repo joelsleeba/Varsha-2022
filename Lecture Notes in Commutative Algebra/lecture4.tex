@@ -1,2 +1,88 @@
-\section{Lecture 4 --- 22 August, 2022 --- \textit{insert the topic name}}
-Begin lecture 4!
+\section{Lecture 4 --- 22 August, 2022 --- Exact Sequences and some homological algebra?}
+\begin{definition}[Short Exact Sequence]
+    \begin{tikzcd}
+	0 \arrow[r] &  A \arrow[r,"f"] & B \arrow[r, "g"] & C \arrow[r] & 0
+    \end{tikzcd}
+    is called a short exact sequence if 
+    \begin{enumerate}
+	\item $\text{im } f = \ker g$
+	\item $g$ is surjective
+	\item $f$ is injective
+    \end{enumerate}
+    \label{def:short-exact-sequence}
+\end{definition}
+
+\begin{remark}
+    The sequence
+    \begin{tikzcd}
+	0 \arrow[r] & A \arrow[r, "f"] & B
+    \end{tikzcd}
+    is an exact sequence iff $f$ is injective. Also the sequence \begin{tikzcd}
+	A \arrow[r,"g"] & B \arrow[r] & 0
+    \end{tikzcd}
+    is exact iff $g$ is surjective.
+    \label{rem:exact-inj-sur}
+\end{remark}
+
+\begin{proposition}[Left exactness of the $Hom$-functor]
+    Let
+    \begin{tikzcd}
+	0 \arrow[r] & N_1 \arrow[r, "\varphi"] & N_2 \arrow[r, "\psi"] & N_3
+    \end{tikzcd}
+    be an exact sequence of $R$-modules. Then \\
+    \begin{tikzcd}
+	0 \arrow[r] & Hom_{R} \left( M, N_1 \right) \arrow[r, "\varphi ^{*}"] & Hom (M, N_2)  \arrow[r, "\psi ^{*}"] & Hom (M, N_3)
+    \end{tikzcd}
+    is an exact sequence.
+    \label{prop:homological-left-zero}
+\end{proposition}
+\begin{proof}
+    First, we need to define the map $\varphi ^{*} : Hom (M, N_1 ) \to Hom (M, N_2)$. So, let $f \in Hom \left( M, N_1 \right)$. Then we may define the map $\varphi ^{*} (f) = \varphi f$ as the folllowing diagram:
+    \begin{tikzcd}
+	M \arrow[d, "f"] \arrow[dotted, dr, "\varphi f"] \\ 
+	N_1 \arrow[r, "\varphi"] & N_2
+    \end{tikzcd}
+    Likewise, we define $\psi^{*} : Hom (M, N_2 ) \to Hom (M, N_3)$ by $\psi ^{*} (g) = \psi g$ for $g\in Hom (M, N_2)$ as in the following diagram: \begin{tikzcd}
+	M \arrow[d, "g"] \arrow[dotted, dr, "\psi g"] \\ 
+	N_2 \arrow[r, "\psi"] & N_3
+    \end{tikzcd}
+
+    Now, we show that \begin{tikzcd}
+	0 \arrow[r] & Hom_{R} \left( M, N_1 \right) \arrow[r, "\varphi ^{*}"] & Hom (M, N_2)  \arrow[r, "\psi ^{*}"] & Hom (M, N_3)
+    \end{tikzcd} is an exact sequence.
+
+    We first show exactness in the middle. For that, we need to show that $\im \varphi^{*} = \ker \psi ^{*}$.
+
+    First, we show the $\im \varphi ^{*} \subset \ker \psi ^{*}$. Let $g \in \im \varphi ^{*}$. Then $g = \varphi ^{*} \left( f \right)$ for some $f\in Hom (M, N_1)$. Then 
+    \begin{align*}
+	\psi ^{*} (g) &= \psi ^{*} (\varphi ^{*} (f)) \\
+	&= \psi (\varphi f) = 0
+    \end{align*}
+    Note that the last equality holds because the the original sequence is exact at $N_2$. (For more details, let $m \in M$. Then $\psi ( \varphi (f(m)))= 0$ as $\im \varphi = \ker \psi$).
+
+    (The reverse inclusion is much harder to prove, or, at least that's what he said \ldots)
+    Let $f\in \ker \psi ^{*}$. Then $\psi f =0$. 
+
+    Also, note that $\ker \psi = \varphi (N_1 ) \cong N_1$ since $\varphi$ is injective and the original exact sequence.
+
+    We claim that (by the universal property of the kernel $\left( N_1 , \varphi \right)$) there is a unique map $g: M \to N_1$ such that $g \varphi =f$.
+	\begin{center}
+	\begin{tikzcd}
+	    & &  M \arrow[dotted, dl, "\exists !g" ] \arrow[d, "f"] & \\
+	    0 \arrow[r] & N_1 \arrow[r, "\varphi"] & N_2 \arrow[r, "\psi"] & N_3
+	\end{tikzcd}
+    \end{center}
+
+    We proceed to show the existence of the map $g: M \to N_1$ that we have claimed. Let $m \in M$. Then $f(m) \in N_2$. Then $\psi (f(m))=0$ because $\psi f =0$. Hence $f\left( m \right) \in \ker \psi$. But $\ker \psi = \im \phi$, so, there is some $n_1 \in N_1$ such that $\varphi (n_1) = f(m)$. We define $g\left( m \right) = n_1$.
+
+    It is easy to see that if $g(m)=n_1$ then $\varphi g (m ) = \varphi (n_1) = f(m)$. So $\varphi g = f$.
+
+    Now, we show that $\varphi$ is well-defined. The only place where well-definedness is lost is when we took preimages, so, let $n_1 , n_1 ' \in N_1$ such that $\varphi (n_1 ) = f(m)$ and $\varphi (n_1 ' ) = f(m)$. Now, since $\varphi$ is injective, we have that $f(m)=\varphi (n_1) = \varphi (n_1 ^{'})$ implies $n_1 = n_1 ^{'}$. Therefore, $g$ is well-defined.
+
+    Now, we need to prove that $g\in Hom \left( M, N_1 \right)$. But this immediately follows from the facts that $\varphi$ and $f$ are homomorphisms. 
+
+    Thus, we have that $\varphi ^{*} \left( g \right) = f$ and hence $f \in \im g^{*}$.
+
+    We need to show that $\ker \varphi ^{*} = \left\{ 0 \right\}$. For that, let $f \in Hom (M, N_1 )$. Then $\varphi ^{*} (f)=0$ implies that $\varphi f =0$. By the original exact sequence, $\varphi$ is injective. Let $m \in M$. Then $\varphi (f(m))=0$ and the fact that $\varphi$ is injective implies that $f(m)=0$. Since $m$ was arbitrary, we have that $f=0$.
+
+\end{proof}
