@@ -1,13 +1,14 @@
 \section{Lecture 4 --- 22 August, 2022 --- Exact Sequences and some homological algebra?}
+\subsection{Review of Exact Sequences}
 \begin{definition}[Short Exact Sequence]
     \begin{tikzcd}
 	0 \arrow[r] &  A \arrow[r,"f"] & B \arrow[r, "g"] & C \arrow[r] & 0
     \end{tikzcd}
     is called a short exact sequence if 
     \begin{enumerate}
-	\item $\text{im } f = \ker g$
-	\item $g$ is surjective
-	\item $f$ is injective
+	\item $\text{im } f = \ker g$,
+	\item $g$ is surjective,
+	\item $f$ is injective.
     \end{enumerate}
     \label{def:short-exact-sequence}
 \end{definition}
@@ -23,6 +24,13 @@
     is exact iff $g$ is surjective.
     \label{rem:exact-inj-sur}
 \end{remark}
+
+\begin{definition}
+    Let $f: M \to N$ be a $A$-module homomorphism then we define $\text{coker }f := N/\im f$.
+    \label{def:coker}
+\end{definition}
+
+\subsection{Theorems involving exactness of Hom-functor}
 
 \begin{proposition}[Left exactness of the $Hom$-functor]
     Let

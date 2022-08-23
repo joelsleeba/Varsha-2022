@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  23 AUG 2022 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.8.8)  23 AUG 2022 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -782,21 +782,21 @@ r/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . Then $\OML/cmm/m
 r/m/n/12 ) =
  []
 
-[2] [3]) (./lecture2.tex [4]) (./lecture3.tex [5] [6]) (./lecture4.tex
-Overfull \hbox (1.61494pt too wide) in paragraph at lines 5--8
-[][]\T1/cmr/bx/n/12 Definition Ÿ4.0.1 \T1/cmr/m/n/12 (Short Ex-act Se-quence)\T
+[2] [3]) (./lecture2.tex [4]) (./lecture3.tex [5] [6] [7]) (./lecture4.tex
+Overfull \hbox (1.61494pt too wide) in paragraph at lines 6--9
+[][]\T1/cmr/bx/n/12 Definition Ÿ4.1.1 \T1/cmr/m/n/12 (Short Ex-act Se-quence)\T
 1/cmr/bx/n/12 . [][] \T1/cmr/m/n/12 is called
  []
 
-[7]
-Overfull \hbox (22.99545pt too wide) in paragraph at lines 28--38
-[][]\T1/cmr/bx/n/12 Proposition Ÿ4.0.3 \T1/cmr/m/n/12 (Left ex-act-ness of the 
+
+Overfull \hbox (22.99545pt too wide) in paragraph at lines 36--46
+[][]\T1/cmr/bx/n/12 Proposition Ÿ4.2.1 \T1/cmr/m/n/12 (Left ex-act-ness of the 
 $\OML/cmm/m/it/12 Hom$\T1/cmr/m/n/12 -functor)\T1/cmr/bx/n/12 . []\T1/cmr/m/it/
 12 Let []
  []
 
 
-Overfull \hbox (25.48924pt too wide) in paragraph at lines 40--49
+Overfull \hbox (25.48924pt too wide) in paragraph at lines 48--57
 \OML/cmm/m/it/12 Hom []$\T1/cmr/m/n/12 . Then we may de-fine the map $\OML/cmm/
 m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 /12 'f$ \T1/cmr/m/n/12 as the fol-l-low-ing di-a-gram: []
@@ -804,13 +804,13 @@ m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 
 [8]) [9] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A183D253568C5AE7604891FB50BFC729;1016.
+(rerunfilecheck)             Checksum: A80A209ACA9186C24A6F2836416267B5;1184.
  ) 
 Here is how much of TeX's memory you used:
- 20194 strings out of 479304
- 385239 string characters out of 5869780
- 724854 words of memory out of 5000000
- 36917 multiletter control sequences out of 15000+600000
+ 20200 strings out of 479304
+ 385323 string characters out of 5869780
+ 711798 words of memory out of 5000000
+ 36920 multiletter control sequences out of 15000+600000
  420988 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  127i,15n,130p,675b,1044s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -830,10 +830,10 @@ lic/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx172
 xmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
 .pfb>
-Output written on main.pdf (9 pages, 254130 bytes).
+Output written on main.pdf (9 pages, 254747 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
