@@ -10,3 +10,4 @@
 \contentsline {section}{\numberline {\S 4}Lecture 4 --- 22 August, 2022 --- Exact Sequences and some homological algebra?}{8}{section.4}%
 \contentsline {subsection}{\numberline {\S 4.1}Review of Exact Sequences}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {\S 4.2}Theorems involving exactness of Hom-functor}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {\S 5}Lecture 5 --- 23rd August, 2022 --- \text {Another day, another topic}}{10}{section.5}%

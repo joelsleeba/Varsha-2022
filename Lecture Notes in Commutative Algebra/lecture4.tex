@@ -42,7 +42,7 @@
 	0 \arrow[r] & Hom_{R} \left( M, N_1 \right) \arrow[r, "\varphi ^{*}"] & Hom (M, N_2)  \arrow[r, "\psi ^{*}"] & Hom (M, N_3)
     \end{tikzcd}
     is an exact sequence.
-    \label{prop:homological-left-zero}
+    \label{prop:left-exact-Hom-functor}
 \end{proposition}
 \begin{proof}
     First, we need to define the map $\varphi ^{*} : Hom (M, N_1 ) \to Hom (M, N_2)$. So, let $f \in Hom \left( M, N_1 \right)$. Then we may define the map $\varphi ^{*} (f) = \varphi f$ as the folllowing diagram:
@@ -93,4 +93,21 @@
 
     We need to show that $\ker \varphi ^{*} = \left\{ 0 \right\}$. For that, let $f \in Hom (M, N_1 )$. Then $\varphi ^{*} (f)=0$ implies that $\varphi f =0$. By the original exact sequence, $\varphi$ is injective. Let $m \in M$. Then $\varphi (f(m))=0$ and the fact that $\varphi$ is injective implies that $f(m)=0$. Since $m$ was arbitrary, we have that $f=0$.
 
+\end{proof}
+
+\begin{proposition}[Right exactness of the $Hom$ functor]
+    Let \begin{tikzcd}
+	M_1 \arrow[r, "\varphi"] & M_2 \arrow[r, "\psi"] & M_3 \arrow[r]  & 0
+    \end{tikzcd}
+    be an exact sequence of $R$-modules. Then
+    \begin{center}
+	\begin{tikzcd}
+	    0 \arrow[r] & Hom (M_3 , N) \arrow[r, "\psi ^{*}"] & Hom (M_2 , N) \arrow[r, "\varphi ^{*}"]& Hom \left( M_1 , N \right)
+	\end{tikzcd}
+    \end{center}
+    is an exact sequence of $R$-module. 
+    \label{prop:right-exact-Hom-functor}
+\end{proposition}
+\begin{proof}
+Repeat the same as in Proposition \ref{prop:left-exact-Hom-functor} but this time with $\text{coker}$ and the universal property of $\left( M_3 , \psi \right)$.
 \end{proof}
