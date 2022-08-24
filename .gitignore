@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-*.log
-*.aux
-*.toc
-*.out
-*synctex*
-*.sh
-*.latexmain
-=======
 *
->>>>>>> edit
-!.tex
-!.pdf
+!*.tex
+!*.pdf
