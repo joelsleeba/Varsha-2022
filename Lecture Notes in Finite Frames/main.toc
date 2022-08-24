@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {\S 1}Lecture 1 --- 10th August, 2022 --- Hilbert Spaces \& Frames}{1}{section.1}%
-\contentsline {subsection}{\numberline {\S 1.1}Inner Product Spaces}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {\S 1.2}Hilbert Spaces \& Frames}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {\S 2}Lecture 2 --- 12th August, 2022 --- A hell lot of definitions! (and some examples)}{2}{section.2}%
-\contentsline {subsection}{\numberline {\S 2.1}Some definition and remarks on the definition of Frames}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {\S 2.2}Examples of Frames}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {\S 2.3}Properties of frames in finite dimensional Hilbert spaces}{4}{subsection.2.3}%

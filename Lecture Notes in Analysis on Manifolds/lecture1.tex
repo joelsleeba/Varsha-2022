@@ -1,0 +1,172 @@
+\section{Lecture 1 --- 10th August 2022 --- Review of Real Analysis}
+
+
+\subsection{Metric Spaces}
+\begin{definition}[Metric Space]
+    \label{def:Metric_space}
+    A set $X$ along with a function $d: X\times X \to \R^+$ is called a metric space if $d$ satisfies the following properties
+    \begin{enumerate}
+        \item $d(x,y) = 0 \iff x=y$
+        \item $d(x,y) = d(y,x)$
+        \item $d(x,y) \le d(x, z) + d(z, y)$ where $x, y, z \in Z$
+    \end{enumerate}
+\end{definition}
+
+Suppose $(X,d)$ is a metric space and $Y \subset X$, Then $(Y,d)$ is also a metric space
+
+\begin{definition}[Open Ball]
+    \label{def:open_ball}
+    We define $B_d(x_0, \epsilon)$, the open ball of radius $\epsilon$ about $x_0 \in X$ as $$B_d \left(x_0, \epsilon \right) = \left\{ x \in X \vert d\left(x, x_0\right) < \epsilon \right\}$$
+    Moreover if the metric $d$ is known we'll write $B_{\epsilon}(x)$ instead of $B_d(x, \epsilon)$ 
+\end{definition}
+
+\begin{definition}[Open Set]
+    \label{def:open_set}
+    Let $(X,d)$ be a metric space. Then a subset $U \subset X$ is open if for all $x \in U$ there exists an $\epsilon > 0$ such that $B_d(x, \epsilon) \subset U$
+\end{definition}
+
+\begin{fact}
+    For $x_1, x_2 \in X$ if $B_{\epsilon_1}(x_1) \subset B_{\epsilon_2}(x_2)$, then $d(x_1, x_2) \le \epsilon$
+\end{fact}
+
+\begin{fact}
+    Let $A_1 \subset B_{\epsilon_1}(x)$ and $A_2 \subset B_{\epsilon_2}(x)$, then $A_1 \cup A_2 \subset B_{max(\epsilon_1, \epsilon_2)}(x)$
+\end{fact}
+
+\begin{fact}
+    Let $\left\{ U_\alpha \mid \alpha \in I \right\}$ be a collection of open sets in $X$. Then $\cup_\alpha U_\alpha$ is open
+\end{fact}
+
+\begin{fact}
+    Let $(X,d)$ be a metric space and let $Y\subset X$. Let $A$ be open about $d\mid_Y$, the restriction of $d$ to $Y$. Then there exist an open set $U$ in $X$ such that $A = U \cap Y$
+\end{fact}
+
+\begin{fact}
+    Finite intersection of open sets is open
+\end{fact}
+
+\begin{fact}
+    $A \subset X$ is closed $\iff$ $A^c$ is open
+\end{fact}
+
+
+
+\subsection{Norms}
+We'll define and work mainly with 2 different norms in $\R^n$. Euclidean norm and Supremum norm
+
+\begin{definition}[Euclidean Norm]
+    \label{def:l2_norm}
+    Let $x=(x_1, x_2, \ldots x_n) \in \R^n$, then we define the euclidean norm of $x$, denoted by $\|x\|$, to be $$\|x\| = \sqrt{\sum_{i=1}^{n}(x_i^2)}$$
+\end{definition}
+
+\begin{definition}[Supremum Norm]
+    \label{def:sup_norm}
+    Let $x=(x_1, x_2, \ldots x_n) \in \R^n$, then we define the supremum norm of $x$, denoted by $\vert x \vert$, to be $$\vert x \vert = \text{max}\left\{x_i \mid 1 \le i \le n \right\}$$
+\end{definition}
+
+\begin{fact}
+    The norms we defined above will satisfy $$\vert x-y \vert \ \le \ \| x-y \| \ \le \ \sqrt{n} \vert x-y \vert $$
+\end{fact}
+
+\begin{fact}
+    Given any norm $\|\cdot\|$ in $X$, it induces a metric in $X$ defined as $d(x, y) = \|x-y\|$. This metric is called the metric induced by the norm $\|\cdot\|$
+\end{fact}
+
+\begin{fact}
+    A subset $U \subset \R^n$ is open about euclidean metric iff it is open about the supremum metric
+\end{fact}
+
+
+
+\subsection{Continuous Functions and properties}
+\begin{definition}[Function continuous at a point]
+    \label{def:point_continuous_function}
+    Let $(X,d_X)$ and $(Y, d_Y)$ be metric spaces. Then a function $f: X \to Y$ is continuous at a point $x_0 \in X$ if for all $\epsilon > 0$ there exist a $\delta > 0$ such that $d_X(x, x_0) < \delta \implies d_Y(y, y_0) < \epsilon$
+\end{definition}
+
+\begin{definition}[Function continuous on $X$]
+    \label{def:continuous_function}
+    We say $f$ is continuous on $X$ if $f$ is continuous at $x$ for all $x \in X$
+\end{definition}
+
+\begin{definition}[Topological Definition of continuity]
+    \label{def:topological_continuous_function}
+    $f: X \to Y$ is continuous iff given any open ball $U \in Y$, $f^{-1}(U)$ is open in $X$
+\end{definition}
+
+
+
+\subsection{Metric topology}
+\begin{definition}[Limit Point]
+    \label{def:limit_point}
+    Let $(X,d)$ be a metric space. $x_0$ is a limit point of $Y\subset X$ if for all $\epsilon > 0$, $B_{\epsilon}(x_0) \cap Y$ is an infinite set
+\end{definition}
+
+\begin{definition}[Closure of a set]
+    \label{def:set_closure}
+    If $A\subset X$, then the closure of $A$, $\bar A$ is defined as the union of $A$ with the limit points of $A$ 
+\end{definition}
+
+\begin{definition}[Interior of a Set]
+    \label{def:set_interior}
+    If $A\subset X$, then the interior of $A$, Int($A$) is defined as $(\bar A^c)^c$
+\end{definition}
+
+\begin{definition}[Exterior of a set]
+    \label{def:set_exterior}
+    If $A\subset X$, then the exterior of $A$, Ext($A$) is defined as the interior of $A^c$
+\end{definition}
+
+\begin{definition}[Boundary of a set]
+    \label{def:set_boundary}
+    If $A\subset X$, then the boundary of $A$ is defined as $X \setminus (\text{Int}(A) \cup \text{Ext}(A))$
+\end{definition}
+
+\begin{fact}
+    The interior of $A$, Int($A$) is an open set
+\end{fact}
+
+
+
+\subsection{Compact Sets}
+\begin{definition}[Cover of a set]
+    \label{def:set_cover}
+    A collection $\left\{U_\alpha \subset X \mid \alpha \in I \right\}$ is a cover of $A$ if $A  \subset \cup_{\alpha \in I} U_\alpha$
+\end{definition}
+
+\begin{theorem}[Heine Borel Theorem]
+    \label{heine_borel}
+    $A \subset \R^n$ is compact iff every open cover of $A$ has a finite subcover
+\end{theorem}
+
+\begin{fact}
+    Let $(X, d_X), (Y, d_Y)$ be metric spaces and $f:X \to Y$ be continuous. If $A\subset X$ is compact then $f(A)$ is also compact.
+\end{fact}
+
+\begin{fact}
+    Let $f: X \to \R$ be a continuous function and $A\subset X$ be compact. Then $f$ attains a maximum in $A$
+\end{fact}
+
+\begin{fact}
+    Let $f: X \to Y$ be continuous and $A\subset X$ be compact. Then $f$ is uniformly continuous on $A$
+\end{fact}
+
+
+
+\subsection{Connected Sets}
+\begin{definition}[Connected metric space]
+    \label{def:connected_space}
+    A metric space $X$ is said to be connected if $X$ cannot be written as a disjoint union of 2 open sets
+\end{definition}
+
+\begin{fact}
+    Let $f:X \to Y$ be a continuous function. Then, if $X$ is a connected space, $f(X)$ is also connected in $Y$
+\end{fact}
+
+\begin{fact}
+    Let $f:X \to \R$ be a continuous function and $X$ be connected. If $a, b \in f(X)$ then for all $r\in \R$ such that $a<r<b$, $r\in f(X)$
+\end{fact}
+
+
+    Prove all the statements given as facts. This requires only an exposure to real analysis
+
