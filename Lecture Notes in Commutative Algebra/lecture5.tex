@@ -1,1 +1,104 @@
-\section{Lecture 5 --- 23rd August, 2022 --- \text{Another day, another topic}}
+\section{Lecture 5 --- 23rd August, 2022 --- Prime ideal controls somehow \ldots}
+
+To justify the title, we get straight down to the very basics:
+
+
+\subsection{Krull's theorem and its relation with multiplicatively closed set}
+\begin{definition}[Multiplicatively Closed Set]
+    Let $A$ be a ring. A subset $S$ of $A$ is called \textit{multiplicatively closed} if
+    \begin{enumerate}[label=(\roman*)]
+	\item $0\not \in S$ and
+	\item for all $a,b\in A$, $a,b \in S \Longrightarrow ab\in S$
+    \end{enumerate}
+    A subset $S$ of $A$ is called \textit{saturated multiplicatively closed} if 
+\begin{enumerate}[label=(\roman*)]
+	\item $0\not \in S$ and
+	\item for all $a,b\in A$, $a,b \in S \Longleftrightarrow ab\in S$
+    \end{enumerate}
+
+    \label{def:MCS}
+\end{definition}
+
+\begin{theorem}[Krull's theorem]
+    Let $A$ be a ring and $S$ be a multiplicatively closed set. If $I$ is an ideal of $A$ maximal with respect to being disjoint with $S$ among ideals of $A$ then $I$ is a prime ideal.
+    \label{thm:Krull}
+\end{theorem}
+\begin{proof}
+    Let $A$ be a ring and $S$ be a multiplicatively closed set, let $I$ be an ideal of $A$ maximal with respect to being disjoint with $S$ among ideals of $A$.
+
+    We want to prove that $I$ is a prime ideal. For the sake of contradiction, suppose that there were elements $a,b \in A$ satisfying $ab \in I$ but $a\not\in I$ and $b\not\in I$.
+    Then consider the ideals $I+\left( a \right) $ and $I+\left( b \right)$. Clearly both the aforementioned ideals are strictly bigger than $I$. So, by assumption of maximality, we have that $\left( I + \left( a \right) \right) \cap S \ne \emptyset$ and $\left( I + \left( b \right) \right) \cap S \ne \emptyset$.
+
+    So, we let $s_1 \in S \cap \left( I+ \left( a \right) \right)$ and let $s_2 \in S \cap \left( I + \left( b \right) \right)$.
+
+    Since $s_1 \in I + \left( a \right)$ and $s_2 \in I + \left( b \right)$, we can write $s_1 = i_1 + r_1 a$ and $s_2 = i_2 + r_2 b$ for some $i_1, i_2 \in I$ and some $r_1 , r_2 \in R$.
+
+    Then $s_1s_2 = \underbrace{i_1 i_2 + i_1 r_2 a + i_2 r_1 a}_{\in I} + \underbrace{r_1 r_2 ab}_{\in I \text{ as } ab \in I} \in I$. Also, note that $s_1 s_2 \in S$ since $S$ is multiplicatively closed. Hence $s_1 s_2 \in S\cap I$. But $S\cap I$ is an empty set by assumption. That is a contradiction!
+\end{proof}
+
+\subsection{Radical \& Nilradical}
+
+\begin{definition}[radical of an ideal]
+    Let $A$ be a ring and let $I$ be an ideal of $A$. We denote the \text{radical} of $I$ as $\sqrt{I}$ and define it as:
+    $$\sqrt{I} := \left\{ r \in A \, | \, r^{n} \in I \text{ for some } n\in \N \right\}$$
+    \label{def:radical}
+\end{definition}
+It is easy to see that $I \subset \sqrt{I}$.
+
+\begin{theorem}
+    Let $A$ be a commutative ring and $I$ be an ideal. Then 
+    \begin{equation*}
+	\sqrt{I} = \bigcap \left\{ P \, | \, P \text{ is a prime ideal containing } I \right\}
+    \end{equation*}
+    \label{thm:radical-and-primes}
+\end{theorem}
+\begin{proof}
+    We first prove the $\supset$-inclusion. Let $r\not \in \sqrt{I}$. Then the set $S:=\left\{ 1, r, r^{2}, \ldots , r^{n}, \ldots \right\}$ is clearly a multiplicatively closed set. Then $S \cap I = \emptyset$ because if $S \cap I$ was nonempty then $r^k \in I$ for some $k \in \N$ but then by definition of $\sqrt{I}$, we would have that $r\in \sqrt{I}$.
+
+    Hence, the collection $\calX = \left\{ I \subset A \, | \, I \text{ is an ideal of } A \text{ and } I\cap S = \emptyset \right\}$ is nonempty.
+
+    We now use Zorn's Lemma to show that the there is a ideal $J$ of $A$ which is maximal with respect to being disjoint with $S$ and then appeal to Krull's theorem \ref{thm:Krull}.
+
+    First consider the poset $\left( \calX , \subset \right)$. Let $\calC \subset \calX$ be a chain. Then $\bigcup \calC$ is an ideal, of course and $\left(\bigcup \calC \right) \cap S = \emptyset$. Hence, every chain in $\calX$ has a maximal element and hence by Zorn's lemma, $\calC$ has the ideal $J$ that we need, that is, $J$ is an ideal of $A$ which is maximal with respect to being disjoint with $S$.
+
+    By Krull's theorem \ref{thm:Krull}, we have that $J$ is a prime ideal. But then $r\not \in J$ as $J \cap S =\emptyset$. Hence we have shown the reverse inclusion $\supset$.
+
+    Now, let $x \in \sqrt{I}$ and let $P$ be any prime ideal containing $I$. Then by definition of radical, $x^{n } \in I$ for some $n \in I$. But also note that $I \subset P$ therefore $x^{n } \in P$ and hence by primeness of $P$, we have that $I \subset P$. Hence $x$ is contained in any prime ideal $P$ containing $I$. 
+
+    This completes the proof!
+\end{proof}
+
+\begin{corollary}
+    Let $A$ be a commutative ring and $I$ be an ideal of $A$. Then $\sqrt{I}$ is an ideal of $A$.
+    \label{cor:radical-is-an-ideal}
+\end{corollary}
+\begin{proof}
+    From theorem \ref{thm:radical-and-primes}, we have that $\sqrt{ I}$ is an intersection of ideals and since arbitrary intersection of ideals is again a ideal, we have that $\sqrt{I} $ is an ideal.
+\end{proof}
+
+\begin{definition}[nilradical]
+    Let $A$ be a ring. We define the \textit{nilradical} of $A$, $\calN \left( A \right)$ as $\calN (A) = \sqrt{ \left\{ 0 \right\}}$, the radical of the zero ideal.
+    \label{def:nilradical}
+\end{definition}
+
+\begin{remark}
+    It easily follows by definition of radical that $\calN \left( A \right)$ is the set of all nilpotent elements of $A$.
+    Also, it follows from Theorem \ref{thm:radical-and-primes} that the nilradical is the intersection of all prime ideals.
+    \label{rem:nilradical}
+\end{remark}
+
+\subsection{Noetherian rings \& Cohn's theorem}
+
+\begin{definition}
+    A ring $A$ is called \textit{Noetherian} if every ideal of $A$ is finitely generated
+    \label{def:Noetherian-ring}
+\end{definition}
+
+The following theorem tells us \emph{why prime ideal controls somehow\ldots}
+
+\begin{theorem}[Cohn's theorem]
+    A ring A is Noetherian iff every prime ideal of $A$ is finitely generated.
+    \label{thm:cohn}
+\end{theorem}
+
+
